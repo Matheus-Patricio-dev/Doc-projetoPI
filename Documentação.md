@@ -1,8 +1,11 @@
 <h1 align="center">Documentação Projeto Integrador I</h1>
 
 ### Integrantes do Grupo:
-- [**Matheus Patricio**](https://github.com/Matheus-Patricio-dev) - Integrante
-- [**Bruno Barboza**](https://github.com/BrunoBarbozaDeLima)  - Integrante.
+- [**Matheus Patricio**](https://github.com/Matheus-Patricio-dev) - Integrante -> Pagina de vendas(3) & pagina de sobre nos(2)
+- [**Bruno Barboza**](https://github.com/BrunoBarbozaDeLima)  - Integrante. -> Pagina de FeedBack(4)
+- [**Kleita Barbosa**](https://github.com/kleitadenje)  - Integrante. -> Pagina contato(5)
+- [**Eduardo Terrone**](https://github.com/terronemusic)  - Integrante. -> Pagina home(1)
+
 
 
 ## Objetivo I:
@@ -24,7 +27,7 @@ Satélites de ultima geração.
 ### Tarefas:
 - [x] Definir qual o tema e conceito
 - [x] Definir qual vai ser o conteúdo da aplicação
-- [ ] Definir quem vai ficar com qual página para desenvolvimento
+- [x] Definir quem vai ficar com qual página para desenvolvimento
 - [ ] Desenvolver o Layout da aplicação
 
 ### Anotações:
