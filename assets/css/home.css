@@ -1,0 +1,339 @@
+:root {
+    --white: #f5f5f5;
+    --black: #1a1a1a;
+    --blue: #0066ff;
+    --darkblue: #0550E3;
+
+}
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
+    font-family: 'Satoshi', sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.header img {
+    width: 175px;
+}
+
+.header nav ul {
+    display: flex;
+    
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 18px;
+}
+
+/* Estilo para o item ativo */
+nav ul li a:hover {
+    color: var(--blue); /* Cor Azul-claro para o item com hover */
+    transition: color 0.5s ease;
+}
+
+/* Estilo para o item ativo */
+nav ul li:active {
+    color: var(--darkblue); /* Cor Azul para o item ativo */
+    transition: color 0.2s ease;
+}
+
+.button-acquire {
+    text-decoration: none;
+    width: 115px;
+    background: var(--blue);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    line-height: 25px;
+    transition: background 0.5s ease;
+}
+
+.button-acquire:hover {
+    background: var(--darkblue);
+}
+
+.button-acquire:active {
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+/* Layout Flex para o Main */
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Section principal */
+
+
+.main-content {
+    width: 800px;
+}
+
+.main-content h1 {
+    font-weight: 500;
+    font-family: Monument Extended;
+    font-size: 60px;
+    color: var(--blue);
+}
+
+.main-content svg {
+    padding-left: 10px;
+}
+
+.main-content p {
+    padding-left: 10px;
+}
+
+aside {
+    width: 220px;
+}
+
+aside img {
+    width: 220px;
+}
+
+.second-part h2 {
+    font-family: monument extended;
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--blue);
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tec {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.tecCard {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 600px;
+    font-family: 'Satoshi', sans-serif;
+    border: solid 2px var(--blue);
+    border-radius: 20px;
+    gap: px;
+}
+
+.tecCard p {
+    font-size: 18px;
+}
+
+.solutions {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+/* FOOTER */
+
+.footer-content {
+    display: flex;
+    font-family: 'Satoshi', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.footer-content a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 12px;
+}
+
+.footer-content p {
+    font-size: 12px;
+}
+
+#email {
+    border: none;
+    border-bottom: solid #1a1a1a 1px;
+}
+
+footer .newsletter .subtitle {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+footer .newsletter button {
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    transition: background 0.5s ease;
+}
+
+footer .newsletter button:hover {
+    background: #a1a1a1;
+}
+
+.burger-icon {
+    font-size: 30px;
+    color: var(--black);
+    cursor: pointer;
+    display: none; /* Esconde o ícone no desktop */
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    /* Ajustes responsivos podem ser adicionados aqui */
+
+    body {
+        max-width: 976px;
+    }
+
+    header img {
+        width: 120px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .content-wrapper aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .content-wrapper aside img {
+        width: 150px;
+    }
+
+    .main-content svg {
+        padding: 0;
+    }
+
+    .main-content p {
+        padding: 0;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .burger-icon {
+      display: block; /* Exibe o ícone de hambúrguer em telas pequenas */
+    }
+    
+    .header img {
+        width: 120px;
+    }
+  
+    .header nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      height: 30vh;
+      transform: translateX(-100%); /* Esconde o menu */
+      transition: transform 0.3s ease;
+    }
+  
+    .header nav {
+      flex-direction: column;
+      padding-top: 50px;
+    }
+  
+    .header nav ul li {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .header nav ul li a {
+      padding: 15px;
+    }
+  
+    /* Exibe o menu quando o checkbox é marcado */
+    .menu-toggle:checked + .header nav {
+      transform: translateX(0);
+    }
+  }
