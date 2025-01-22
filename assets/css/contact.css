@@ -1,0 +1,247 @@
+:root {
+    --white: #f5f5f5;
+    --black: #1a1a1a;
+    --blue: #0066ff;
+    --darkblue: #0550E3;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    max-width: 1280px;
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+/* Navbar Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+.header nav ul {
+    display: flex;
+    
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 18px;
+}
+
+/* Estilo para o item ativo */
+nav ul li a:hover {
+    color: var(--blue); /* Cor Azul-claro para o item com hover */
+    transition: color 0.5s ease;
+}
+
+/* Estilo para o item ativo */
+nav ul li:active {
+    color: var(--darkblue); /* Cor Azul para o item ativo */
+    transition: color 0.2s ease;
+}
+
+.button-acquire {
+    text-decoration: none;
+    width: 115px;
+    background: var(--blue);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    line-height: 25px;
+    transition: background 0.5s ease;
+}
+
+.button-acquire:hover {
+    background: var(--darkblue);
+}
+
+.button-acquire:active {
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h1 {
+    color: #0066FF;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.send-btn {
+    background-color: #0066FF;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #0052cc;
+}
+/* FOOTER */
+
+.footer-content {
+    display: flex;
+    font-family: 'Satoshi', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.footer-content a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 12px;
+}
+
+.footer-content p {
+    font-size: 12px;
+}
+
+#email {
+    border: none;
+    border-bottom: solid #1a1a1a 1px;
+    border-radius: 0px;
+}
+
+footer .newsletter .subtitle {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+footer .newsletter button {
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    transition: background 0.5s ease;
+}
+
+footer .newsletter button:hover {
+    background: #a1a1a1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
