@@ -108,42 +108,60 @@ nav ul li:active {
 }
 
 .reviews-section h1 {
+    font-family: 'Monument Extended', sans-serif;
     color: #0066FF;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-weight: 800;
 }
 
 .subtitle {
-    font-weight: bold;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
 .description {
+    font-family: 'Satoshi', sans-serif;
     color: #666;
     margin-bottom: 3rem;
+    font-size: 0.9rem;
 }
 
 /* Reviews Container */
 .reviews-container {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 2rem auto;
     position: relative;
+    overflow: visible;
+    padding: 0 3rem;
+}
+
+/* Container visível para 3 cards */
+.review-cards-wrapper {
+    width: calc(310px * 3 + 3rem); /* Ajustado para incluir os gaps */
+    margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .review-cards {
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.5rem;
     transition: transform 0.5s ease;
+    width: fit-content;
 }
 
 .review-card {
-    flex: 0 0 350px;
+    flex: 0 0 310px;
+    min-width: 310px;
     background-color: white;
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #0066FF;
+    text-align: left;
 }
 
 /* Esconde os inputs radio */
@@ -151,60 +169,65 @@ input[type="radio"] {
     display: none;
 }
 
-/* Controla a posição do slider baseado no input selecionado */
-#slide1:checked ~ .review-cards {
+/* Controla a posição do slider */
+#slide1:checked ~ .review-cards-wrapper .review-cards {
     transform: translateX(0);
 }
 
-#slide2:checked ~ .review-cards {
-    transform: translateX(calc(-350px * 3 - 6rem)); /* Move 3 cards + gaps */
+#slide2:checked ~ .review-cards-wrapper .review-cards {
+    transform: translateX(calc(-310px * 3 - 3rem));
 }
 
 /* Estilo dos botões de navegação */
 .navigation {
     position: absolute;
-    width: 100%;
+    width: calc(100% + 100px); /* Aumentado para as setas ficarem fora */
     top: 50%;
+    left: -50px;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .nav-btn {
-    background: #0066FF;
-    color: white;
-    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+    font-size: 1.2rem;
+    pointer-events: auto;
+    transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
-    opacity: 1;
+    background: #e0e0e0;
+    border-color: #bbb;
 }
 
-/* Gradientes nas laterais */
+.prev-btn {
+    left: -50px;
+}
+
+.next-btn {
+    right: -50px;
+}
+
+/* Removendo os gradientes laterais que não são mais necessários */
 .reviews-container::before,
 .reviews-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.reviews-container::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
-}
-
-.reviews-container::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+    display: none;
 }
 
 /* Hover effect nos cards */
@@ -215,9 +238,11 @@ input[type="radio"] {
 .stars {
     color: #0066FF;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .review-text {
+    font-family: 'Satoshi', sans-serif;
     color: #333;
     margin-bottom: 2rem;
     line-height: 1.5;
@@ -227,6 +252,11 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.company-info span {
+    font-family: 'Satoshi', sans-serif;
 }
 
 .company-info img {
@@ -296,12 +326,18 @@ footer .newsletter button:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .reviews-container {
+        max-width: 300px;
+        padding: 0 2rem;
+    }
+
     .review-card {
         flex: 0 0 300px;
+        min-width: 300px;
     }
     
     #slide2:checked ~ .review-cards {
-        transform: translateX(calc(-300px - 2rem));
+        transform: translateX(calc(-300px * 3 - 4.5rem));
     }
 }
 
