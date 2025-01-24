@@ -246,7 +246,7 @@ footer .newsletter button:hover {
     display: none; /* Esconde o ícone no desktop */
 }
 
-.menu {
+.menu-toggle {
     display: none;
 }
 

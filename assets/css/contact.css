@@ -6,8 +6,6 @@
 }
 
 * {
-    margin: 0 auto;
-    padding: 0;
     box-sizing: border-box;
     font-family: satoshi, sans-serif    ;
     max-width: 1280px;
@@ -37,12 +35,28 @@
         url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
 }
 
+/* Definindo o estilo básico para a página */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
+    font-family: 'Satoshi', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 
 /* Navbar Styles */
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
     margin-top: 10px;
     margin-bottom: 60px;
 }
@@ -99,13 +113,17 @@ nav ul li:active {
     transform: translateY(2px);
 }
 
+.burger-icon {
+    font-size: 30px;
+    color: var(--black);
+    cursor: pointer;
+    display: none; /* Esconde o ícone no desktop */
+}
+
 .menu-toggle {
     display: none;
 }
 
-.burger-icon {
-    display: none;
-}
 
 /* Contact Section */
 .contact-section {
@@ -133,30 +151,23 @@ nav ul li:active {
 .subtitle {
     font-family: 'Satoshi', sans-serif;
     color: #666;
+    margin: 0 auto;
     margin-bottom: 3rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Form Styles */
-/* Definindo o estilo básico para a página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-}
 
 /* Estilo para a seção de contato */
 .contact-section {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 60px;
 }
 
 /* Estilos para os títulos */
@@ -175,7 +186,6 @@ h1 {
 .subtitle {
     color: #777;
     font-size: 14px;
-    margin-bottom: 30px;
 }
 
 /* Estilo para o formulário */
@@ -185,7 +195,6 @@ h1 {
     gap: 1rem;
     max-width: 500px;
     margin: 0 auto;
-
     gap: 15px;
 
 }
@@ -193,17 +202,22 @@ h1 {
 /* Estilo para os campos do formulário */
 .form-content {
     display: flex;
-
     gap: 1rem;
     width: 100%;
 }
 
-.form-row input {
-    flex: 1;
-    width: 50%; /* Garante que cada input ocupe metade do espaço */
+.form-content-name {
+    display: flex;
+    gap: 30px;
 }
 
-input, textarea {
+.form-row .form-container {
+    flex: 1;
+    width: 50%; /* Garante que cada input ocupe metade do espaço */
+    border: var(--darkblue);
+}
+
+.form-container, textarea {
     font-family: 'Satoshi', sans-serif;
     padding: 1rem;
     border: 1px solid #0066FF;
@@ -215,21 +229,19 @@ input, textarea {
 }
 
 /* Adicionar efeito hover nos inputs */
-input:hover, textarea:hover {
+.form-container:hover, textarea:hover {
     border-color: #0052cc;
 }
 
 /* Adicionar efeito focus nos inputs */
-input:focus, textarea:focus {
+.fomr-container:focus, textarea:focus {
     outline: none;
     border-color: #0052cc;
     box-shadow: 0 0 0 1px #0066FF20;
-
     flex-direction: column;
-    width: 420px;
 }
 
-input, textarea {
+.form-container, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -247,7 +259,7 @@ textarea {
 }
 
 /* Foco nos campos de entrada */
-input:focus, textarea:focus {
+.form-container:focus, textarea:focus {
     border-color: #007BFF;
     outline: none;
 }
@@ -279,8 +291,6 @@ input:focus, textarea:focus {
 /* FOOTER */
 
 
-
-/* FOOTER */
 .footer-content {
     display: flex;
     font-family: 'Satoshi', sans-serif;
@@ -335,6 +345,15 @@ footer .newsletter button {
 
 footer .newsletter button:hover {
     background: #a1a1a1;
+}
+
+footer .newsletter-title {
+    margin: 0;
+}
+
+.newsletter-subtitle {
+    margin: 0;
+    font-weight: bold;
 }
 
 /* Responsividade */

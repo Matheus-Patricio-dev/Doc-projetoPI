@@ -31,20 +31,17 @@
             <p class="subtitle">Our support team will get in touch to answer all your questions and help with whatever you need.</p>
 
             <form class="contact-form">
-                <div class="form-content">
-                    <input type="text" placeholder="Name" required>
+                <div class="form-content-name">
+                    <input type="text" placeholder="Name" class="form-container" required>
+                    <input type="text" placeholder="Last Name" class="form-container" required>
                 </div>
 
                 <div class="form-content">
-                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" class="form-container" placeholder="E-Mail" required>
                 </div>
 
                 <div class="form-content">
-                    <input type="email" placeholder="E-Mail" required>
-                </div>
-
-                <div class="form-content">
-                    <textarea placeholder="Message" required></textarea>
+                    <textarea placeholder="Message" class="form-container" required></textarea>
                 </div>
 
                 <button type="submit" class="send-btn">Send</button>
@@ -65,11 +62,11 @@
     
             <div class="newsletter">
                 <p class="newsletter-title">Deseja acompanhar as novidades da NeoOrbit?</p>
-                <form action="/enviar-email" id="form"method="POST">
+                <form action="/enviar-email" method="POST">
                     <input type="email" id="email" name="email" placeholder="E-mail" required>
                     <button type="submit">→</button>
                 </form>
-                <p class="subtitle">Ao enviar, você aceita a nossa política de privacidade.</p>
+                <p class="newsletter-subtitle">Ao enviar, você aceita a nossa política de privacidade.</p>
             </div>
         </div>
     </footer>
