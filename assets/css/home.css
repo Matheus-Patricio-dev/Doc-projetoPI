@@ -51,9 +51,6 @@ body {
     margin-bottom: 60px;
 }
 
-.header img {
-    width: 175px;
-}
 
 .header nav ul {
     display: flex;
@@ -253,6 +250,7 @@ footer .newsletter button:hover {
     display: none;
 }
 
+
 @media (max-width: 1024px) {
     /* Ajustes responsivos podem ser adicionados aqui */
 
@@ -299,41 +297,57 @@ footer .newsletter button:hover {
 }
 
 @media (max-width: 768px) {
-    .burger-icon {
-      display: block; /* Exibe o ícone de hambúrguer em telas pequenas */
+    body {
+        max-width: 720px;
+        margin: 0 auto;
     }
     
-    .header img {
-        width: 120px;
+    .burger-icon {
+        display: block; /* Exibe o ícone de hambúrguer em telas pequenas */
+        font-size: 30px;
+        cursor: pointer;
+        padding: 20px;
     }
+    
+    /* Esconde o menu inicialmente */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--blue);
+        transform: translateX(-100%); /* Esconde o menu */
+        transition: transform 0.3s ease; /* Animação de transição */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+        z-index: 10;
+    }
+    
+    /* Quando o checkbox é marcado, move o menu para a posição visível */
+    .menu-toggle:checked + .burger-icon + .nav-links {
+        transform: translateX(0); /* Exibe o menu */
+    }
+    
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-links ul li {
+        margin-bottom: 20px;
+    }
+    
+    .nav-links ul li a {
+        color: black;
+        font-size: 20px;
+        padding: 15px;
+        text-decoration: none;
+    }
+
+}
   
-    .header nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      height: 30vh;
-      transform: translateX(-100%); /* Esconde o menu */
-      transition: transform 0.3s ease;
-    }
-  
-    .header nav {
-      flex-direction: column;
-      padding-top: 50px;
-    }
-  
-    .header nav ul li {
-      margin-left: 0;
-      margin-bottom: 20px;
-    }
-  
-    .header nav ul li a {
-      padding: 15px;
-    }
-  
-    /* Exibe o menu quando o checkbox é marcado */
-    .menu-toggle:checked + .header nav {
-      transform: translateX(0);
-    }
-  }

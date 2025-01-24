@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews dos Clientes</title>
-    <link rel="stylesheet" href="/Doc-projetoPI/Css/reviews_Styles.css">
+    <link rel="stylesheet" href="../assets/css/reviews_Styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.svg" alt="Logo">
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#product">Product</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <button class="acquire-btn">Acquire</button>
-    </nav>
+    <header class="header">
+        <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit-Logo" width="175px">
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html"">Home</a></li>
+                <li><a href="sobrenos.html">About us</a></li>
+                <li><a href="Reviews.html">Reviews</a></li>
+                <li><a href="produto.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>                                
+        </nav>
+        <label for="menu-toggle" class="burger-icon">&#9776;</label>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <a href="/html/produto.html" class="button-acquire">Acquire</a>
+
+    </header>
 
     <main>
         <section class="reviews-section">
@@ -31,91 +34,99 @@
                 <input type="radio" name="slider" id="slide1" checked>
                 <input type="radio" name="slider" id="slide2">
                 
-                <div class="review-cards">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"We have a great experience with NeoOrbit. All the technology provided to us, all the monitoring according to our needs, all the infinite possibilities of customization have been fundamental. We look forward to what's to come in this new phase of the company!"</p>
-                        <div class="company-info">
-                            <img src="/Doc-projetoPI/img/marcas/google-37.png" alt="Google">
-                            <span>Google</span>
-                            <span class="date">Client since 2020</span>
+                <div class="review-cards-wrapper">
+                    <div class="review-cards">
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"We have a great experience with NeoOrbit. All the technology provided to us, all the monitoring according to our needs, all the infinite possibilities of customization have been fundamental. We look forward to what's to come in this new phase of the company!"</p>
+                            <div class="company-info">
+                                <img src="/assets/img/marcas/google-37.png" alt="Google">
+                                <span>Google</span>
+                                <span class="date">Client since 2020</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"We are extremely happy with our partnership with NeoOrbit. The technology offered has been fundamental to our growth, and the continuous support, always attentive to our demands, allows us to work with security and confidence. The possibilities for innovation that NeoOrbit provides are immense!"</p>
-                        <div class="company-info">
-                            <img src="/Doc-projetoPI/img/marcas/meta_PNG12.png" alt="Meta">
-                            <span>Meta</span>
-                            <span class="date">Client since 2021</span>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"We are extremely happy with our partnership with NeoOrbit. The technology offered has been fundamental to our growth, and the continuous support, always attentive to our demands, allows us to work with security and confidence. The possibilities for innovation that NeoOrbit provides are immense!"</p>
+                            <div class="company-info">
+                                <img src="/assets/img/marcas/meta_PNG12.png" alt="Meta">
+                                <span>Meta</span>
+                                <span class="date">Client since 2021</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"The experience with NeoOrbit has been incredible. The cutting-edge technology and dedicated support, which always adjusts perfectly to our demands, are differentials that make it an exceptional company for us. The opportunities for innovation are immense!"</p>
-                        <div class="company-info">
-                            <img src="/Doc-projetoPI/img/marcas/apple-logo.png" alt="Apple">
-                            <span>Apple</span>
-                            <span class="date">Client since 2022</span>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"The experience with NeoOrbit has been incredible. The cutting-edge technology and dedicated support, which always adjusts perfectly to our demands, are differentials that make it an exceptional company for us. The opportunities for innovation are immense!"</p>
+                            <div class="company-info">
+                                <img src="/assets/img/marcas/apple-logo.png" alt="Apple">
+                                <span>Apple</span>
+                                <span class="date">Client since 2022</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"The partnership with NeoOrbit has been fundamental to our digital transformation. The platform offers innovative solutions that allow us to optimize processes and improve customer experience. The technical support is exceptional!"</p>
-                        <div class="company-info">
-                            <img src="/Doc-projetoPI/img/marcas/amazon-2.png" alt="Amazon">
-                            <span>Amazon</span>
-                            <span class="date">Client since 2021</span>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"The partnership with NeoOrbit has been fundamental to our digital transformation. The platform offers innovative solutions that allow us to optimize processes and improve customer experience. The technical support is exceptional!"</p>
+                            <div class="company-info">
+                                <img src="/assets/img/marcas/amazon-2.png" alt="Amazon">
+                                <span>Amazon</span>
+                                <span class="date">Client since 2021</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"NeoOrbit has been a strategic partner in our innovation journey. The cutting-edge technology and customization capabilities allow us to maintain our market leadership. A truly transformative collaboration."</p>
-                        <div class="company-info">
-                            <img src="/Doc-projetoPI/img/marcas/Microsoft_Logo_512px.png" alt="Microsoft">
-                            <span>Microsoft</span>
-                            <span class="date">Client since 2020</span>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"NeoOrbit has been a strategic partner in our innovation journey. The cutting-edge technology and customization capabilities allow us to maintain our market leadership. A truly transformative collaboration."</p>
+                            <div class="company-info">
+                                <img src="/assets/img/marcas/Microsoft_Logo_512px.png" alt="Microsoft">
+                                <span>Microsoft</span>
+                                <span class="date">Client since 2020</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"NeoOrbit's expertise in advanced technological solutions has been crucial to our evolution. The platform provides the security and reliability we need in our industry. A partnership that continues to exceed expectations."</p>
-                        <div class="company-info">
-                            <img src="/Doc-projetoPI/img/marcas/boeing-2048.png" alt="Boeing">
-                            <span>Boeing</span>
-                            <span class="date">Client since 2022</span>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"NeoOrbit's expertise in advanced technological solutions has been crucial to our evolution. The platform provides the security and reliability we need in our industry. A partnership that continues to exceed expectations."</p>
+                            <div class="company-info">
+                                <img src="/assets/img/marcas/boeing-2048.png" alt="Boeing">
+                                <span>Boeing</span>
+                                <span class="date">Client since 2022</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="navigation">
-                    <label for="slide1" class="nav-btn prev-btn">❮</label>
-                    <label for="slide2" class="nav-btn next-btn">❯</label>
+                    <label for="slide1" class="nav-btn prev-btn">←</label>
+                    <label for="slide2" class="nav-btn next-btn">→</label>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
         <div class="footer-content">
-            <img src="logo.svg" alt="NeoOrbit Logo" class="footer-logo">
-            <span>NEOORBIT© 2025</span>
+            <div class="footer-logo">
+                <img src="../assets/img/logos/logoNew.png" alt="Logo-NeoOrbit" width="90px">
+                <p class="copyright">&copy; 2023 NeoOrbit. Todos os direitos reservados.</p>
+            </div>
+            
             <div class="footer-links">
                 <a href="#">Política de Privacidade</a>
-                <a href="#">Privacidade e Jurídico</a>
                 <a href="#">Consultar Disponibilidade de Região</a>
-                <a href="#">Deseja acompanhar as novidades da NeoOrbit?</a>
             </div>
-            <div class="email-signup">
-                <input type="email" placeholder="E-mail">
-                <button type="submit">→</button>
+    
+            <div class="newsletter">
+                <p class="newsletter-title">Deseja acompanhar as novidades da NeoOrbit?</p>
+                <form action="/enviar-email" method="POST">
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <button type="submit">→</button>
+                </form>
+                <p class="subtitle">Ao enviar, você aceita a nossa política de privacidade.</p>
             </div>
         </div>
-    </footer>
+    </footer
 </body>
 </html>

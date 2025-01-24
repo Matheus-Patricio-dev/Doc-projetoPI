@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="/Doc-projetoPI/Css/contact.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.svg" alt="Logo">
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#product">Product</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <button class="acquire-btn">Acquire</button>
-    </nav>
+    <header class="header">
+        <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit-Logo" width="175px">
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html"">Home</a></li>
+                <li><a href="sobrenos.html">About us</a></li>
+                <li><a href="Reviews.html">Reviews</a></li>
+                <li><a href="produto.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>                                
+        </nav>
+        <label for="menu-toggle" class="burger-icon">&#9776;</label>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <a href="/html/produto.html" class="button-acquire">Acquire</a>
+
+    </header>
 
     <main>
         <section class="contact-section">
@@ -28,30 +31,42 @@
             <p class="subtitle">Our support team will get in touch to answer all your questions and help with whatever you need.</p>
 
             <form class="contact-form">
-                <div class="form-row">
-                    <input type="text" placeholder="Name" required>
-                    <input type="text" placeholder="Last Name" required>
+                <div class="form-content-name">
+                    <input type="text" placeholder="Name" class="form-container" required>
+                    <input type="text" placeholder="Last Name" class="form-container" required>
                 </div>
-                <input type="email" placeholder="E-Mail" required>
-                <textarea placeholder="Message" required></textarea>
+
+                <div class="form-content">
+                    <input type="email" class="form-container" placeholder="E-Mail" required>
+                </div>
+
+                <div class="form-content">
+                    <textarea placeholder="Message" class="form-container" required></textarea>
+                </div>
+
                 <button type="submit" class="send-btn">Send</button>
             </form>
         </section>
     </main>
-
     <footer>
         <div class="footer-content">
-            <img src="logo.svg" alt="NeoOrbit Logo" class="footer-logo">
-            <span>NEOORBIT© 2025</span>
+            <div class="footer-logo">
+                <img src="../assets/img/logos/logoNew.png" alt="Logo-NeoOrbit" width="90px">
+                <p class="copyright">&copy; 2023 NeoOrbit. Todos os direitos reservados.</p>
+            </div>
+            
             <div class="footer-links">
                 <a href="#">Política de Privacidade</a>
-                <a href="#">Privacidade e Jurídico</a>
                 <a href="#">Consultar Disponibilidade de Região</a>
-                <a href="#">Deseja acompanhar as novidades da NeoOrbit?</a>
             </div>
-            <div class="email-signup">
-                <input type="email" placeholder="E-mail">
-                <button type="submit">→</button>
+    
+            <div class="newsletter">
+                <p class="newsletter-title">Deseja acompanhar as novidades da NeoOrbit?</p>
+                <form action="/enviar-email" method="POST">
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <button type="submit">→</button>
+                </form>
+                <p class="newsletter-subtitle">Ao enviar, você aceita a nossa política de privacidade.</p>
             </div>
         </div>
     </footer>

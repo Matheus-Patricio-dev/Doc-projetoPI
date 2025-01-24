@@ -1,0 +1,359 @@
+:root {
+    --white: #f5f5f5;
+    --black: #1a1a1a;
+    --blue: #0066ff;
+    --darkblue: #0550E3;
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: satoshi, sans-serif;
+
+    background: var(--white);
+}
+body {
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 100vh;
+}
+
+
+
+/* Navbar Styles */
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+.header nav ul {
+    display: flex;
+    
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 18px;
+}
+
+/* Estilo para o item ativo */
+nav ul li a:hover {
+    color: var(--blue); /* Cor Azul-claro para o item com hover */
+    transition: color 0.5s ease;
+}
+
+/* Estilo para o item ativo */
+nav ul li:active {
+    color: var(--darkblue); /* Cor Azul para o item ativo */
+    transition: color 0.2s ease;
+}
+
+.button-acquire {
+    text-decoration: none;
+    width: 115px;
+    background: var(--blue);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    line-height: 25px;
+    transition: background 0.5s ease;
+}
+
+.button-acquire:hover {
+    background: var(--darkblue);
+}
+
+.button-acquire:active {
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.burger-icon {
+    display: none;
+}
+/* Reviews Section */
+.reviews-section {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.reviews-section h1 {
+    font-family: 'Monument Extended', sans-serif;
+    color: #0066FF;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 60px;
+}
+
+.subtitle {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-family: 'Satoshi', sans-serif;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+/* Reviews Container */
+.reviews-container {
+    max-width: 1080px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: visible;
+    padding: 0 3rem;
+}
+
+/* Container visível para 3 cards */
+.review-cards-wrapper {
+    width: calc(310px * 3 + 3rem); /* Ajustado para incluir os gaps */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.review-cards {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s ease;
+    width: fit-content;
+}
+
+.review-card {
+    flex: 0 0 310px;
+    min-width: 310px;
+    background-color: white;
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #0066FF;
+    text-align: left;
+}
+
+/* Esconde os inputs radio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Controla a posição do slider */
+#slide1:checked ~ .review-cards-wrapper .review-cards {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .review-cards-wrapper .review-cards {
+    transform: translateX(calc(-310px * 3 - 3rem));
+}
+
+/* Estilo dos botões de navegação */
+.navigation {
+    position: absolute;
+    width: calc(100% + 100px); /* Aumentado para as setas ficarem fora */
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #e0e0e0;
+    border-color: #bbb;
+}
+
+.prev-btn {
+    left: -50px;
+}
+
+.next-btn {
+    right: -50px;
+}
+
+/* Removendo os gradientes laterais que não são mais necessários */
+.reviews-container::before,
+.reviews-container::after {
+    display: none;
+}
+
+/* Hover effect nos cards */
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #0066FF;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.review-text {
+    font-family: 'Satoshi', sans-serif;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.company-info span {
+    font-family: 'Satoshi', sans-serif;
+}
+
+.company-info img {
+    width: 30px;
+    height: 30px;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+
+.footer-content {
+    display: flex;
+    font-family: 'Satoshi', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.footer-content a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 12px;
+}
+
+.footer-content p {
+    font-size: 12px;
+}
+
+#email {
+    border: none;
+    border-bottom: solid #1a1a1a 1px;
+    border-radius: none;
+}
+
+footer .newsletter .subtitle {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+footer .newsletter button {
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    transition: background 0.5s ease;
+    background: var(--white);
+}
+
+footer .newsletter button:hover {
+    background: #a1a1a1;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .reviews-container {
+        max-width: 300px;
+        padding: 0 2rem;
+    }
+
+    .review-card {
+        flex: 0 0 300px;
+        min-width: 300px;
+    }
+    
+    #slide2:checked ~ .review-cards {
+        transform: translateX(calc(-300px * 3 - 4.5rem));
+    }
+}
+
