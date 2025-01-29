@@ -1,0 +1,279 @@
+/* Reset e variáveis globais */
+:root {
+    --primary-color: #0000FF;
+    --secondary-color: #D3D3D3;
+    --text-color: #000000;
+    --white: #FFFFFF;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Header e Navegação */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: #D3D3D3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.Logo-NeoOrbit {
+    height: 30px;
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+header a:hover {
+    color: var(--primary-color);
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+header a[href="Produto"] {
+    color: var(--primary-color);
+}
+
+.Adquirir {
+    margin-left: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+/* Conteúdo Principal */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+
+/* Planos */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--card-shadow);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card .sobre-plano {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.card .recursos {
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.card .plano-mensal {
+    margin: 2rem 0;
+}
+
+.card .investimento {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #666;
+}
+
+/* Botão Ordenar ajustado */
+.botoes-ordenar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.Ordenar {
+    background-color: var(--white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 150px;
+}
+
+.Ordenar:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.newsletter {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.newsletter button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    h1 {
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
+
+    .cards-container {
+        padding: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+}
+
+/* Botão Adquirir com efeito hover */
+.Adquirir:hover {
+    background-color: #0000dd; /* Um tom mais escuro de azul */
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Seletor Planos/Compras */
+.selector-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.selector {
+    display: flex;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    padding: 0.3rem;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selector button {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+.selector button.active {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selector button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
