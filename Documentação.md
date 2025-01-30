@@ -50,6 +50,31 @@ layout matheus:
 https://www.starlink.com/br/residential
 
 
+
+
+## Objetivo III:
+Desenvolver com HTML e CSS as 5 Paginas apresentadas.
+
+  
+### PAGINAS:
+
+- [x] Home
+- [x] About
+- [x] Reviews
+- [x] Product
+- [x] Contact
+
+### PAGINAS RESPOSIVAS MOBILE:
+
+- [x] Home
+- [x] About
+- [x] Reviews
+- [x] Product
+- [x] Contact
+
+
+
+
 # 🏗️ **Configuração Inicial**
 
 Antes de começar, assegure-se de que:
