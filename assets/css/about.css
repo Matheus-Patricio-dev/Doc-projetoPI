@@ -1,0 +1,298 @@
+/* Reset CSS */
+:root {
+    --white: #f5f5f5;
+    --black: #1a1a1a;
+    --blue: #0066ff;
+    --darkblue: #0550E3;
+
+}
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Monument Extended'),
+        url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
+    font-family: 'Satoshi', sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+.header nav ul {
+    display: flex;
+    
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 18px;
+}
+
+/* Estilo para o item ativo */
+nav ul li a:hover {
+    color: var(--blue); /* Cor Azul-claro para o item com hover */
+    transition: color 0.5s ease;
+}
+
+/* Estilo para o item ativo */
+nav ul li:active {
+    color: var(--darkblue); /* Cor Azul para o item ativo */
+    transition: color 0.2s ease;
+}
+
+.button-acquire {
+    text-decoration: none;
+    width: 115px;
+    background: var(--blue);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    line-height: 25px;
+    transition: background 0.5s ease;
+}
+
+.button-acquire:hover {
+    background: var(--darkblue);
+}
+
+.button-acquire:active {
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+/* Layout Flex para o Main */
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.burger-icon {
+    font-size: 30px;
+    color: var(--black);
+    cursor: pointer;
+    display: none; /* Esconde o ícone no desktop */
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Main Content */
+main {
+    margin-top: 100px;
+    padding: 40px 80px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Article Section */
+article {
+    padding-top: 40px;
+}
+
+article h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+article h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+article svg {
+    margin: 20px 0 40px 0;
+}
+
+article p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Aside Section */
+aside {
+    padding-top: 40px;
+}
+
+.satellite-image {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.data-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.container {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+footer .logo {
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.newsletter {
+    margin-top: 40px;
+}
+
+.newsletter h3 {
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.newsletter input {
+    padding: 10px 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 30px;
+    background-color: #0000FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #0000dd;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .data-containers {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .data-containers {
+        grid-template-columns: 1fr;
+    }
+} 
