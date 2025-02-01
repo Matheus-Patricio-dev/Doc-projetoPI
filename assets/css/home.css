@@ -183,7 +183,7 @@ aside img {
     font-family: 'Satoshi', sans-serif;
     border: solid 2px var(--blue);
     border-radius: 20px;
-    gap: px;
+    gap: 10px;
 }
 
 .tecCard p {
@@ -252,104 +252,180 @@ footer .newsletter button:hover {
 }
 
 
-
-@media (max-width: 1024px) {
-    /* Ajustes responsivos podem ser adicionados aqui */
-
+@media (max-width: 425px) {
+    
     body {
-        max-width: 976px;
+        height: 100vh;
+        margin: 0 auto;
+        max-width: 390px;
     }
 
-    header img {
-        width: 120px;
+  
+    
+    .header img {
+        width: 90px;
+        align-items: center;
+
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+        
+    }
+    .nav-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+      
+    #navbar ul li {
+    padding: 10px 0;
+    }
+      
+    #navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    }
+
+    .burger-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .burger-line {
+        width: 30px;
+        height: 4px;
+        background-color: var(--black);
+        border-radius: 5px;
+    }
+
+     /* Estilo quando o menu é ativado */
+    #menu-toggle:checked + .burger-icon .burger-line:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+    
+    #menu-toggle:checked + .burger-icon .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked + .burger-icon .burger-line:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    .button-acquire {
+        width: 90px;
+        padding: 5px;
+        font-size: 12px;
     }
 
     .content-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
     }
-    
+
     .main-content {
         text-align: center;
-        width: 100%;
-    }
-    
-    .content-wrapper aside {
-        display: flex;
+        max-width: 390px;
         justify-content: center;
-        align-items: center;
-        gap: 40px;
     }
-    
-    .content-wrapper aside img {
-        width: 150px;
+
+    .main-content h1 {
+        font-size: 28px;
     }
 
     .main-content svg {
+        width: 36px;
         padding: 0;
     }
-
     .main-content p {
-        padding: 0;
-    }
-
-
-}
-
-@media (max-width: 768px) {
-    body {
-        max-width: 720px;
-        margin: 0 auto;
-    }
-    
-    .burger-icon {
-        display: block; /* Exibe o ícone de hambúrguer em telas pequenas */
-        font-size: 30px;
-        cursor: pointer;
-        padding: 20px;
-    }
-    
-    /* Esconde o menu inicialmente */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--blue);
-        transform: translateX(-100%); /* Esconde o menu */
-        transition: transform 0.3s ease; /* Animação de transição */
-        flex-direction: column;
-        align-items: center;
+        font-size: 12px;
         justify-content: center;
-        padding-top: 50px;
-        z-index: 10;
-    }
-    
-    /* Quando o checkbox é marcado, move o menu para a posição visível */
-    .menu-toggle:checked + .burger-icon + .nav-links {
-        transform: translateX(0); /* Exibe o menu */
-    }
-    
-    .nav-links ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .nav-links ul li {
-        margin-bottom: 20px;
-    }
-    
-    .nav-links ul li a {
-        color: black;
-        font-size: 20px;
-        padding: 15px;
-        text-decoration: none;
     }
 
+    aside {
+        display: flex;
+        gap: 10px;
+
+    }
+
+    aside img {
+        width: 120px;
+    }
+
+    aside img:nth-child(4),
+    aside img:nth-child(5) {
+      display: none;
+      
+    }
+
+    .second-part h2 {
+        font-size: 24px;
+        justify-content: center;
+    }
+
+    .tecCard {
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .tecCard h3 {
+        font-size: 16px;
+    }
+    .tecCard img {
+        width: 55px;
+    }
+    .tecCard p {
+        font-size: 14px;
+    }
+
+    .footer-content img {
+        width: 45px;
+    }
+
+    .footer-content .copyright {
+        font-size: 6px;
+    }
+
+    .footer-content .footer-links  {
+        gap: 8px;
+    }
+
+    .footer-content .footer-links a {
+        font-size: 6px;
+        gap: 4px;
+    }
+
+    .footer-content .newsletter .newsletter-title {
+        font-size: 6px;
+    
+    }
+
+    .footer-content .newsletter .subtitle {
+        font-size: 6px;
+    
+    }
+
+    #email {
+        font-size: 6px;
+        
+    }
+    footer .newsletter form {
+        display: flex;
+    }
+
+    footer .newsletter button {
+        padding: 0;
+    }
 }
-  

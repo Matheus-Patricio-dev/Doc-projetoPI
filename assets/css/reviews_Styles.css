@@ -115,10 +115,11 @@ nav ul li:active {
 .burger-icon {
     display: none;
 }
+
 /* Reviews Section */
 .reviews-section {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
 }
 
 .reviews-section h1 {
@@ -140,7 +141,7 @@ nav ul li:active {
 .description {
     font-family: 'Satoshi', sans-serif;
     color: #666;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-size: 0.9rem;
 }
 
@@ -171,7 +172,7 @@ nav ul li:active {
 .review-card {
     flex: 0 0 310px;
     min-width: 310px;
-    background-color: white;
+    background-color: var(--white);
     padding: 1.8rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -190,7 +191,7 @@ input[type="radio"] {
 }
 
 #slide2:checked ~ .review-cards-wrapper .review-cards {
-    transform: translateX(calc(-310px * 3 - 3rem));
+    transform: translateX(calc(-310px * 3 - 4.5rem));
 }
 
 /* Estilo dos botões de navegação */
@@ -340,20 +341,182 @@ footer .newsletter button:hover {
 }
 
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .reviews-container {
-        max-width: 300px;
-        padding: 0 2rem;
+/* Responsividade para telas menores de 425px */
+@media (max-width: 425px) {
+
+    body {
+        height: 100vh;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    .header {
+        margin-bottom: 20px;
+    }
+    .header img {
+        width: 90px;
+        align-items: center;
     }
 
-    .review-card {
-        flex: 0 0 300px;
-        min-width: 300px;
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+        
+    }
+    .nav-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+      
+    #navbar ul li {
+    padding: 10px 0;
+    }
+      
+    #navbar ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    }
+
+    .burger-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .burger-line {
+        width: 30px;
+        height: 4px;
+        background-color: var(--black);
+        border-radius: 5px;
+    }
+
+     /* Estilo quando o menu é ativado */
+    #menu-toggle:checked + .burger-icon .burger-line:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
     }
     
-    #slide2:checked ~ .review-cards {
-        transform: translateX(calc(-300px * 3 - 4.5rem));
+    #menu-toggle:checked + .burger-icon .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked + .burger-icon .burger-line:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    .button-acquire {
+        width: 90px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .reviews-section h1 {
+        font-size: 30px
+    }
+
+    .reviews-section .reviews-container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Ajuste da transformação do slider para 1 card por vez */
+    #slide1:checked ~ .review-cards-wrapper .review-cards {
+        transform: translateX(0);
+    }
+
+    #slide2:checked ~ .review-cards-wrapper .review-cards {
+        transform: translateX(calc(-330px)); /* Um card por vez */
+    }
+
+    /* Modificar a largura dos cards para 100% e garantir que eles ocupem toda a largura disponível */
+    .review-card {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Reduzir a sombra dos cards */
+    }
+    .review-card p {
+        font-size: 14px;
+    }
+
+    /* Ajustar o estilo dos botões de navegação */
+    .navigation {
+        width: 100%; /* Aumenta a largura dos botões de navegação para ocupar toda a largura */
+        left: 0; /* Posiciona corretamente os botões */
+        padding: 0 20px; /* Adiciona um pequeno espaçamento nas laterais */
+    }
+
+    /* Ajuste no botão anterior e próximo */
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    /* Ajuste do texto e do layout dos cards para melhor visualização em dispositivos pequenos */
+    .review-text {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+        line-height: 1.4;
+    }
+
+    .company-info {
+        flex-direction: column; /* Organiza as informações da empresa em coluna */
+        align-items: center;
+
+    }
+
+    .company-info img {
+        width: 25px; /* Reduz o tamanho da imagem */
+        height: 25px;
+    }
+
+    .stars {
+        font-size: 1.5rem; /* Ajusta o tamanho das estrelas */
+    }
+
+    .footer-content img {
+        width: 45px;
+    }
+
+    .footer-content .copyright {
+        font-size: 6px;
+    }
+
+    .footer-content .footer-links  {
+        gap: 8px;
+    }
+
+    .footer-content .footer-links a {
+        font-size: 6px;
+        gap: 4px;
+    }
+
+    .footer-content .newsletter .newsletter-title {
+        font-size: 6px;
+    
+    }
+
+    .footer-content .newsletter .subtitle {
+        font-size: 6px;
+    
+    }
+
+    #email {
+        font-size: 6px;
+        
+    }
+    footer .newsletter form {
+        display: flex;
+    }
+
+    footer .newsletter button {
+        padding: 0;
     }
 }
-
