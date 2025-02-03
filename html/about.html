@@ -1,89 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoOrbit - Sobre Nós</title>
+    <title>About - NeoOrbit</title>
     <link rel="shortcut icon" href="../img/logos/LogoFinal.png">
-    <link rel="stylesheet" href="../assets/css/about.css">
+    <link rel="stylesheet" href="sobrenos.css">
 </head>
 <body>
-    <header class="header">
-        <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit-Logo" width="175px">
-        <nav class="nav-links">
-            <ul>
-                <li><a href="home.html"">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>                                
+    <header>
+        <nav>
+            <img src="./assets/img/logos/LogoFinal.png" alt="NeoOrbit Logo">
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about" class="active">About</a>
+                <a href="/reviews">Reviews</a>
+                <a href="/product">Product</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <button class="acquire-btn">Acquire</button>
         </nav>
-        <label for="menu-toggle" class="burger-icon">&#9776;</label>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <a href="/html/product.html" class="button-acquire">Acquire</a>
-
     </header>
 
     <main>
-        <article>
-            <h2>Sobre Nós</h2>
-            <h1>NeoOrbit</h1>
-            <div class="circle-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40">
-                    <circle cx="20" cy="20" r="19" stroke="black" stroke-width="2" fill="none"/>
-                    <circle cx="20" cy="20" r="4" fill="black"/>
-                </svg>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id erat a nunc vestibulum viverra id vitae odio. Aliquam tristique massa egestas est ornare, ut convallis leo tincidunt...</p>
-            <p>Nam malesuada ullamcorper sapien non interdum. Vestibulum congue laoreet urna, a lacinia risus tincidunt et...</p>
-        </article>
+        <section class="content">
+            <h1>What is</h1>
+            <h1 class="neoorbit">NEOORBIT?</h1>
 
-        <aside>
-            <img src="../img/Rectangle 1.png" alt="NeoOrbit-satelite-photo" class="satellite-image">
-            <div class="data-containers">
-                <div class="container">
-                    <h4>Data</h4>
-                    <span>+1000</span>
-                </div>
-                <div class="container">
-                    <h4>Data</h4>
-                    <span>+1000</span>
-                </div>
-                <div class="container">
-                    <h4>Data</h4>
-                    <span>+1000</span>
-                </div>
-                <div class="container">
-                    <h4>Data</h4>
-                    <span>+1000</span>
+            <div class="text-content">
+                <p>NeoOrbit® was born in 2018 with a clear mission: to transform the way companies access and use satellite technology. Since the beginning, our company has specialized in the sale of services and private satellites, offering large corporations the possibility of owning their own constellations. We take care of the entire launch process, ensuring the delivery of high performance and reliable solutions.</p>
+                
+                <p>Today, in 2025, we are the largest and most innovative company in the aerospace sector, with a portfolio that serves the largest companies in the world. The quality, security and expertise we deliver have made NeoOrbit the main choice for corporations looking for next-generation satellite solutions, solidifying our leadership position in the global market.</p>
+            </div>
+
+            <div class="proud-section">
+                <h2>WE ARE PROUD OF:</h2>
+                <div class="stats-container">
+                    <div class="stat">
+                        <span class="blue">+ 1000</span> Satellites
+                        <p>launched into orbit</p>
+                    </div>
+                    <div class="stat">
+                        <span class="blue">100%</span> Effectiveness
+                        <p>in our services</p>
+                    </div>
+                    <div class="stat">
+                        <span class="blue">100%</span> Of our
+                        <p>customers are satisfied</p>
+                    </div>
                 </div>
             </div>
-        </aside>
+
+            <div class="features">
+                <div class="feature">
+                    <span class="blue">WE</span> Develop
+                    <p>the best aerospace<br>technology</p>
+                </div>
+                <div class="feature">
+                    <span class="blue">FAST</span> and<br>
+                    <span class="blue">SUSTAINABLE</span>
+                    <p>Growth</p>
+                </div>
+                <div class="feature">
+                    <span class="blue">WE</span> Are
+                    <p>on every continent in the<br>world</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <img src="../assets/img/logos/logoNew.png" alt="Logo-NeoOrbit" width="90px">
-                <p class="copyright">&copy; 2023 NeoOrbit. Todos os direitos reservados.</p>
-            </div>
-            
+            <img src="./assets/img/logos/LogoFinal.png" alt="NeoOrbit Logo">
+            <span>NEOORBIT© 2025</span>
             <div class="footer-links">
                 <a href="#">Política de Privacidade</a>
+                <a href="#">Privacidade e Jurídico</a>
                 <a href="#">Consultar Disponibilidade de Região</a>
-            </div>
-    
-            <div class="newsletter">
-                <p class="newsletter-title">Deseja acompanhar as novidades da NeoOrbit?</p>
-                <form action="/enviar-email" method="POST">
-                    <input type="email" id="email" name="email" placeholder="E-mail" required>
-                    <button type="submit">→</button>
-                </form>
-                <p class="subtitle">Ao enviar, você aceita a nossa política de privacidade.</p>
+                <a href="#">Deseja acompanhar as novidades da NeoOrbit?</a>
+                <div class="email-container">
+                    <input type="email" placeholder="Digite seu e-mail">
+                    <img src="./assets/img/arrow-right.png" alt="Enviar" class="arrow-icon">
+                </div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
