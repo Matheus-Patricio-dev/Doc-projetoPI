@@ -1,13 +1,52 @@
-/* Reset CSS */
+/* Font imports */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('../fonts/MonumentExtended-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('../fonts/MonumentExtended-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+/* Satoshi */
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+/* Reset CSS with updated default font */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Satoshi', sans-serif;
+}
+
+/* Update headings to use Monument Extended */
+h1, h2, h3, h4, h5, h6, 
+.proud-section h2,
+.feature .blue,
+.stat .blue,
+.neoorbit-text,
+.title-style {
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 500;
 }
 
 body {
     background-color: white;
+    font-family: 'Satoshi', sans-serif;
 }
 
 /* Header */
@@ -67,14 +106,19 @@ nav img {
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -1px;  /* Compressed text */
+    text-align: center;
 }
 
 h1.neoorbit {
     color: #0066FF;
     font-size: 48px;
-    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+    line-height: 0.9;
 }
 
 .text-content {
@@ -91,9 +135,13 @@ h1.neoorbit {
 /* Proud Section */
 .proud-section h2 {
     font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -1px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
+/* Stats styling - Updated */
 .stats-container {
     display: flex;
     justify-content: space-around;
@@ -104,18 +152,25 @@ h1.neoorbit {
     text-align: center;
 }
 
-.blue {
-    color: #0066FF;
-    font-weight: bold;
+.stat .blue,
+.stat span:not(.blue) {
     font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.stat .blue {
+    color: #0066FF;
 }
 
 .stat p {
     margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
     color: #333;
 }
 
-/* Features */
+/* Features styling - Updated */
 .features {
     display: flex;
     justify-content: space-around;
@@ -126,8 +181,21 @@ h1.neoorbit {
     text-align: center;
 }
 
+.feature .blue,
+.feature span:not(.blue) {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.feature .blue {
+    color: #0066FF;
+}
+
 .feature p {
     margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
     color: #333;
 }
 
@@ -144,6 +212,7 @@ footer {
     display: flex;
     align-items: center;
     padding: 0 20px;
+    gap: 2rem;  /* Aumentado de 1rem para 2rem */
 }
 
 .footer-content img {
@@ -159,7 +228,7 @@ footer {
 .footer-links {
     display: flex;
     align-items: center;
-    gap: 15px;  /* Reduced gap */
+    gap: 1.5rem;  /* Aumentado de 1rem para 1.5rem */
     margin-left: auto;
 }
 
@@ -174,6 +243,27 @@ footer {
     color: #0066FF;
 }
 
+/* Ajuste os textos do footer em inglês */
+.footer-links a[href*="Politica-de-Privacidade"] {
+    content: "Privacy Policy";
+}
+
+.footer-links a[href*="Privacidade-e-Juridico"] {
+    content: "Privacy & Legal";
+}
+
+.footer-links a[href*="Consultar-Disponibilidade-de-Regiao"] {
+    content: "Check Region Availability";
+}
+
+.footer-links a[href*="Deseja-acompanhar-as-novidades"] {
+    content: "Want to follow NeoOrbit news?";
+}
+
+.email-container input[type="email"]::placeholder {
+    content: "Enter your e-mail";
+}
+
 /* Email input styling - Updated */
 .email-container {
     display: flex;
@@ -182,6 +272,7 @@ footer {
     border-radius: 3px;
     padding: 2px;
     background: white;
+    margin-top: 1rem;  /* Adicionado margem superior */
 }
 
 .email-container input[type="email"] {
@@ -235,4 +326,64 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+/* Stats and Features common styling */
+.stats-container, .features {
+    display: flex;
+    justify-content: space-around;
+    gap: 95px;
+    margin: 0 auto;
+}
+
+.stat, .feature {
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+}
+
+/* Alinhamento à esquerda mais sutil para os textos superiores */
+.stat > div:first-child {
+    text-align: left;
+    padding-left: 10px;  /* Reduzido para 10px */
+}
+
+/* Ajuste específico para o primeiro grupo */
+.stat:first-child > div:first-child {
+    padding-left: 20px;  /* Um pouco mais de padding para o primeiro grupo */
+}
+
+/* Mantendo os textos inferiores centralizados */
+.stat p {
+    text-align: center;
+    margin: 2px 0 25px 0;
+    color: #333;
+}
+
+/* Mantendo o estilo das fontes */
+.stat *,
+.feature *,
+.stat span,
+.feature span,
+.stat p,
+.feature p,
+.stat div,
+.feature div {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.blue {
+    color: #0066FF;
+}
+
+.neoorbit-text {
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    line-height: 0.6;
+    color: #0066FF;
+    text-transform: uppercase;
 } 
