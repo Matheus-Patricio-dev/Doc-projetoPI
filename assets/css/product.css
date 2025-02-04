@@ -1,7 +1,32 @@
-/* Reset e variáveis globais */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Importando as fontes */
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('../fonts/MonumentExtended-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('../fonts/MonumentExtended-Bold.woff2') format('woff2'),
+         url('../fonts/MonumentExtended-Bold.woff') format('woff'),
+         url('../fonts/MonumentExtended-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset e variáveis */
 :root {
-    --primary-color: #0066FF;
-    --text-color: #000000;
+    --primary-blue: #0066FF;
+    --text-dark: #000000;
     --white: #FFFFFF;
     --border-color: #0066FF;
 }
@@ -10,248 +35,475 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    max-width: 1920px;
-    margin: 0 auto;
-    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi', sans-serif;
+    background-color: #FAFAFA;
 }
 
 /* Header */
 header {
+    background: white;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 1rem 4rem;
     display: flex;
     align-items: center;
-    padding: 1rem 4rem;
-    border-bottom: 1px solid #eee;
 }
 
 .logo {
-    height: 40px;
-    margin-right: auto;
+    height: 35px;
 }
 
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
+nav {
     margin: 0 auto;
+    display: flex;
+    gap: 2rem;
 }
 
-.nav-links a {
+/* Estilos base para os links do header */
+nav a {
+    color: #333;
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: bold;
-    position: relative;
-    padding: 5px 0;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
+/* Link ativo do header */
+nav a.active {
+    color: #0066FF;
+    font-weight: 700;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+/* Hover nos links do header */
+nav a:hover {
+    color: #0066FF;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.nav-links a[href="Product"] {
-    color: var(--primary-color);
-}
-
-.acquire-btn {
-    background-color: var(--primary-color);
-    color: var(--white);
+.acquire {
+    background: #0066FF;
+    color: white;
     padding: 0.5rem 1.5rem;
-    border-radius: 5px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: bold;
-    margin-left: auto;
 }
 
-/* Main Content */
-.products-title {
+/* Título PRODUCTS */
+h1 {
+    font-family: 'Monument Extended', sans-serif;
     text-align: center;
-    font-size: 2rem;
-    margin: 3rem 0;
+    color: #0066FF;
+    margin: 2rem 0;
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+    font-weight: 500;
     text-transform: uppercase;
-    color: var(--primary-color);
-    font-weight: bold;
-    letter-spacing: 1px;
+    line-height: 1;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 0.2rem 0.5rem;
+    background: rgba(0, 102, 255, 0.05);
 }
 
-/* Toggle refinado */
-.toggle-container {
+/* Toggle */
+.toggle {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
-}
-
-.toggle-buttons {
-    display: flex;
-    background-color: #E8E8E8;
-    border-radius: 25px;
+    background: #F0F0F0;
+    width: fit-content;
+    margin: 0 auto 2rem;
+    border-radius: 20px;
     padding: 3px;
-    gap: 3px;
+    border: 1px solid #E5E5E5;
 }
 
-.toggle-btn {
-    padding: 8px 24px;
+.toggle button {
+    padding: 0.4rem 1.8rem;
     border: none;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 20px;
     background: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 0.85rem;
 }
 
-.toggle-btn.active {
-    background-color: var(--primary-color);
+.toggle button.active {
+    background: #0066FF;
     color: white;
 }
 
-.toggle-btn:not(.active) {
-    background-color: transparent;
-    color: #666;
-}
-
-.toggle-btn:hover:not(.active) {
-    background-color: #d0d0d0;
-}
-
-/* Cards Section */
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem 4rem;
-}
-
-.card {
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 2rem;
-    width: 300px;
+/* Container principal */
+.products-section {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    transition: transform 0.3s ease;
+    align-items: center;
+    margin: 2rem 4rem;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.card-subtitle {
-    color: #666;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.resources-title {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.benefits-list {
-    list-style: none;
+/* Container dos cards */
+.cards-container {
+    display: flex;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.benefits-list li {
+/* Card */
+.card {
+    border: 1px solid #0066FF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: white;
+    width: 280px;
+}
+
+/* Container dos botões */
+.buttons-container {
+    display: flex;
+    gap: 12.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Botão Order */
+.order {
+    width: 120px; /* Largura reduzida */
+    padding: 0.5rem 0;
+    background: #0066FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Título do plano */
+.plan-title {
+    color: #0066FF;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.monthly-plan {
-    margin-top: auto;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-}
-
-.price-row {
+/* Ajuste do conteúdo dentro do card */
+.investment {
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
-.order-btn {
-    background-color: #fff;
-    color: var(--text-color);
-    border: 1px solid #ddd;
-    transition: all 0.3s ease;
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+.card h2 {
+    color: #0066FF;
+    font-family: 'Monument Extended', sans-serif;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
-.order-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
+.card p {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
 }
 
-/* Footer */
+.card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.card li {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Estilos do Footer */
 footer {
-    border-top: 1px solid #eee;
-    padding: 2rem 4rem;
-    margin-top: 4rem;
+    border-top: 1px solid #f0f0f0;
+    background-color: #ffffff;
+    padding: 1.5rem 0 0.5rem 0;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 2rem;
-    background-color: #f8f8f8;
+    padding: 0 1.5rem;
 }
 
+/* Logo do footer */
 .footer-logo {
-    height: 30px;
+    height: 20px;
 }
 
+/* Barreira vertical */
+.footer-barrier {
+    height: 20px;
+    width: 1px;
+    background-color: #e0e0e0;
+    margin: 0 1.5rem;
+}
+
+/* Container dos links */
 .footer-links {
     display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.footer-links a {
-    color: var(--text-color);
+/* Links do footer */
+.footer-link {
+    color: #333;
     text-decoration: none;
-    font-size: 0.8rem;
-    position: relative;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0 0.4rem;
+    white-space: nowrap;
 }
 
-.footer-links a:hover {
-    color: var(--primary-color);
+/* Separador entre links */
+.footer-link:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    color: #999;
+    font-size: 0.6rem;
+    font-weight: 300;
 }
 
-.footer-links a::after {
-    content: '>';
-    position: absolute;
-    right: -1.5rem;
+/* Hover nos links */
+.footer-link:hover {
+    color: #0066FF;
+}
+
+/* Ícone de seta no final */
+.arrow-icon {
+    margin-left: 0.5rem;
+    height: 14px;
+    opacity: 0.5;
+}
+
+/* Aplicando Monument Extended nos títulos */
+h1, .card h2 {
+    font-family: 'Monument Extended', sans-serif;
+}
+
+.card h3, .card p, .card li {
+    font-family: 'Satoshi', sans-serif;
+}
+
+/* Hover no card */
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Hover no botão Order */
+.order:hover {
+    background: #0052cc; /* Tom mais escuro do azul original */
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Garantir transição suave ao voltar ao estado normal */
+.card, .order {
+    transition: all 0.3s ease;
+}
+
+/* Hover nos links do header */
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0066FF;
+}
+
+/* Estilo especial para o link ativo (Product) */
+.nav-link.active {
+    color: #0066FF;
+}
+
+/* Botão Acquire */
+.acquire-btn {
+    background: #0066FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+/* Hover no botão Acquire */
+.acquire-btn:hover {
+    background: #0052cc;
+    transform: scale(1.05);
+}
+
+/* Garantir que os links mantenham a transição suave */
+.nav-link, .acquire-btn {
+    transition: all 0.3s ease;
+}
+
+/* Hover no título PRODUCTS */
+.products-title:hover {
+    color: #0066FF;
+    transition: color 0.3s ease;
+}
+
+/* Hover nos botões de alternância Plan/Products */
+.toggle-button {
+    transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+    background: #0052cc;
+    transform: scale(1.05);
+}
+
+/* Hover específico para o botão inativo (Products) */
+.toggle-button.inactive:hover {
+    background: #e8e8e8;
+    color: #333;
+}
+
+/* Garantir transição suave */
+.products-title, .toggle-button {
+    transition: all 0.3s ease;
+}
+
+/* Container de busca */
+.footer-search {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Input de email */
+.footer-input {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.65rem;
+    width: 150px;
+    outline: none;
+}
+
+.footer-input::placeholder {
+    color: #999;
+}
+
+/* Botão de busca */
+.footer-search-btn {
+    background: none;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #e0e0e0;
+}
+
+/* Ícone de busca */
+.search-icon {
+    height: 12px;
+    opacity: 0.5;
+}
+
+.footer-search-btn:hover .search-icon {
+    opacity: 0.7;
+}
+
+/* Seção de email */
+.email-section {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+/* Campo de email */
+.email-input {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background: transparent;
+    font-size: 0.65rem;
+    color: #333;
+    padding: 0.25rem;
+    width: 120px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.email-input::placeholder {
+    color: #333;
+    font-weight: 600;
+}
+
+.email-input:hover,
+.email-input:focus {
+    border-bottom-color: #0066FF;
+}
+
+/* Botão de expandir */
+.expand-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícone de expandir */
+.expand-icon {
+    height: 14px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.expand-btn:hover .expand-icon {
+    opacity: 0.7;
+}
+
+/* Botão de enviar */
+.submit-btn {
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
     color: #666;
+    font-size: 14px;
+    transition: color 0.2s;
 }
 
-.footer-links a:last-child::after {
-    display: none;
+.submit-btn:hover {
+    color: #0066FF;
+}
+
+.products-text {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #0066FF;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
 }
