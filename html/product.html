@@ -1,102 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoOrbit - Products</title>
+    <title>PRODUCTS</title>
     <link rel="stylesheet" href="produto.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="NeoOrbit" class="logo">
-        <nav class="nav-links">
-            <a href="Home">Home</a>
-            <a href="About">About</a>
-            <a href="Reviews">Reviews</a>
-            <a href="Product">Product</a>
-            <a href="Contact">Contact</a>
+        <img src="NeoOrbit.png" alt="NeoOrbit">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Reviews</a>
+            <a href="#" class="active">Product</a>
+            <a href="#">Contact</a>
         </nav>
-        <a href="#" class="acquire-btn">Acquire</a>
+        <a href="#" class="acquire">Acquire</a>
     </header>
 
-    <h1 class="products-title">Products</h1>
+    <div class="products-text">PRODUCTS</div>
 
-    <div class="toggle-container">
-        <div class="toggle-buttons">
-            <button class="toggle-btn active">Plan</button>
-            <button class="toggle-btn">Products</button>
-        </div>
+    <div class="toggle">
+        <button class="active">Plan</button>
+        <button>Products</button>
     </div>
 
-    <div class="cards-container">
-        <div class="card">
-            <h2 class="card-title">Basic</h2>
-            <p class="card-subtitle">About the plan</p>
-            <h3 class="resources-title">Resources</h3>
-            <ul class="benefits-list">
-                <li>Benefit 1</li>
-                <li>Benefit 2</li>
-            </ul>
-            <div class="monthly-plan">
+    <div class="products-section">
+        <div class="cards-container">
+            <div class="card">
+                <h2>Basic</h2>
+                <p>About the plan</p>
+                <h3>Resources</h3>
+                <ul>
+                    <li>Benefit 1</li>
+                    <li>Benefit 2</li>
+                </ul>
                 <p>Monthly plan</p>
-                <div class="price-row">
+                <div class="investment">
                     <span>Investment</span>
-                    <span>R$xxx/Month</span>
+                    <span>R$xxxx/Month</span>
                 </div>
             </div>
-            <button class="order-btn">Order</button>
-        </div>
 
-        <div class="card">
-            <h2 class="card-title">Premium</h2>
-            <p class="card-subtitle">About the plan</p>
-            <h3 class="resources-title">Resources</h3>
-            <ul class="benefits-list">
-                <li>Benefit 1</li>
-                <li>Benefit 2</li>
-                <li>Benefit 3</li>
-                <li>Benefit 4</li>
-            </ul>
-            <div class="monthly-plan">
+            <div class="card">
+                <h2>Premium</h2>
+                <p>About the plan</p>
+                <h3>Resources</h3>
+                <ul>
+                    <li>Benefit 1</li>
+                    <li>Benefit 2</li>
+                    <li>Benefit 3</li>
+                    <li>Benefit 4</li>
+                </ul>
                 <p>Monthly plan</p>
-                <div class="price-row">
+                <div class="investment">
                     <span>Investment</span>
-                    <span>R$xxx/Month</span>
+                    <span>R$xxxx/Month</span>
                 </div>
             </div>
-            <button class="order-btn">Order</button>
-        </div>
 
-        <div class="card">
-            <h2 class="card-title">Ultimate</h2>
-            <p class="card-subtitle">About the plan</p>
-            <h3 class="resources-title">Resources</h3>
-            <ul class="benefits-list">
-                <li>Benefit 1</li>
-                <li>Benefit 2</li>
-                <li>Benefit 3</li>
-                <li>Benefit 4</li>
-                <li>Benefit 5</li>
-            </ul>
-            <div class="monthly-plan">
+            <div class="card">
+                <h2>Ultimate</h2>
+                <p>About the plan</p>
+                <h3>Resources</h3>
+                <ul>
+                    <li>Benefit 1</li>
+                    <li>Benefit 2</li>
+                    <li>Benefit 3</li>
+                    <li>Benefit 4</li>
+                    <li>Benefit 5</li>
+                </ul>
                 <p>Monthly plan</p>
-                <div class="price-row">
+                <div class="investment">
                     <span>Investment</span>
-                    <span>R$xxx/Month</span>
+                    <span>R$xxxx/Month</span>
                 </div>
             </div>
-            <button class="order-btn">Order</button>
+        </div>
+        
+        <div class="buttons-container">
+            <button class="order">Order</button>
+            <button class="order">Order</button>
+            <button class="order">Order</button>
         </div>
     </div>
 
     <footer>
-        <img src="logo.png" alt="NeoOrbit" class="footer-logo">
-        <div class="footer-links">
-            <a href="#">Políticas de Privacidade</a>
-            <a href="#">Prioridade e Análise</a>
-            <a href="#">Consultar Disponibilidade de Região</a>
-            <a href="#">Deseja compartilhar os resultados da NeoOrbit?</a>
-            <a href="#">Email</a>
+        <div class="footer-container">
+            <img src="logo.png" alt="NeoOrbit" class="footer-logo">
+            <div class="footer-barrier"></div>
+            <nav class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Priority and Analysis</a>
+                <a href="#" class="footer-link">Check Region Availability</a>
+                <a href="#" class="footer-link">Want to share NeoOrbit results?</a>
+            </nav>
+            <div class="email-section">
+                <input type="email" placeholder="Email" class="email-input">
+                <button type="submit" class="submit-btn">→</button>
+            </div>
         </div>
     </footer>
 </body>
