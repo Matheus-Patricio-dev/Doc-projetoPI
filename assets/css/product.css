@@ -25,81 +25,120 @@
 
 /* Reset e variáveis */
 :root {
-    --primary-blue: #0066FF;
-    --text-dark: #000000;
-    --white: #FFFFFF;
-    --border-color: #0066FF;
+    --white: #f5f5f5;
+    --black: #1a1a1a;
+    --blue: #0066ff;
+    --darkblue: #0550E3;
+
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "satoshi", sans-serif;
+    background-color: var(--white);
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Satoshi', sans-serif;
-    background-color: #FAFAFA;
-}
-
-/* Header */
-header {
-    background: white;
-    border-bottom: 1px solid #E8E8E8;
-    padding: 1rem 4rem;
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 35px;
-}
-
-nav {
+    height: 100vh;
     margin: 0 auto;
+    max-width: 1280px;
+}
+
+
+/* Navbar Styles */
+
+
+.header {
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
 }
 
-/* Estilos base para os links do header */
-nav a {
-    color: #333;
+
+.header nav ul {
+    display: flex;
+    
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header ul li a {
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-    font-weight: 600;
+    padding: 0 20px;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 18px;
 }
 
-/* Link ativo do header */
-nav a.active {
-    color: #0066FF;
-    font-weight: 700;
+/* Estilo para o item ativo */
+nav ul li a:hover {
+    color: var(--blue); /* Cor Azul-claro para o item com hover */
+    transition: color 0.5s ease;
 }
 
-/* Hover nos links do header */
-nav a:hover {
-    color: #0066FF;
+/* Estilo para o item ativo */
+nav ul li:active {
+    color: var(--darkblue); /* Cor Azul para o item ativo */
+    transition: color 0.2s ease;
 }
 
-.acquire {
-    background: #0066FF;
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 4px;
+.button-acquire {
     text-decoration: none;
+    width: 115px;
+    background: var(--blue);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    line-height: 25px;
+    transition: background 0.5s ease;
 }
 
+.button-acquire:hover {
+    background: var(--darkblue);
+}
+
+.button-acquire:active {
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.burger-icon {
+    display: none;
+}
+
+.products-text {
+    font-family: "monument", sans-serif;
+    font-weight: 500;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1;
+    color: #0066FF;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
 /* Título PRODUCTS */
-h1 {
-    font-family: 'Monument Extended', sans-serif;
+.products-text h1 {
+    font-family: "Monument";
     text-align: center;
     color: #0066FF;
     margin: 2rem 0;
     font-size: 2.2rem;
     letter-spacing: -1px;
-    font-weight: 500;
     text-transform: uppercase;
     line-height: 1;
     width: fit-content;
@@ -155,7 +194,7 @@ h1 {
     border: 1px solid #0066FF;
     border-radius: 8px;
     padding: 1.5rem;
-    background: white;
+    background:var(--white);
     width: 280px;
 }
 
@@ -172,7 +211,7 @@ h1 {
     width: 120px; /* Largura reduzida */
     padding: 0.5rem 0;
     background: #0066FF;
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -191,6 +230,12 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .card h2 {
@@ -224,17 +269,11 @@ h1 {
 }
 
 /* Estilos do Footer */
-footer {
-    border-top: 1px solid #f0f0f0;
-    background-color: #ffffff;
-    padding: 1.5rem 0 0.5rem 0;
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
-}
-
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
 }
@@ -337,7 +376,7 @@ h1, .card h2 {
 /* Botão Acquire */
 .acquire-btn {
     background: #0066FF;
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 4px;
     padding: 0.5rem 1rem;
@@ -494,16 +533,4 @@ h1, .card h2 {
     color: #0066FF;
 }
 
-.products-text {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    line-height: 1;
-    color: #0066FF;
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 1200px;
-    padding: 0 1rem;
-}
+

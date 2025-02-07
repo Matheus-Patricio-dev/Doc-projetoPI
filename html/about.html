@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - NeoOrbit</title>
-    <link rel="shortcut icon" href="../img/logos/LogoFinal.png">
-    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="shortcut icon" href="/assets/img/logos/logoNew.png">
+    <link rel="stylesheet" href="/assets/css/about.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="./assets/img/logos/LogoFinal.png" alt="NeoOrbit Logo">
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/about" class="active">About</a>
-                <a href="/reviews">Reviews</a>
-                <a href="/product">Product</a>
-                <a href="/contact">Contact</a>
-            </div>
-            <button class="acquire-btn">Acquire</button>
+    <header class="header">
+        <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit-Logo" width="175px">
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html"">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>                                
         </nav>
+        <label for="menu-toggle" class="burger-icon">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </label>  
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <a href="/html/product.html" class="button-acquire">Acquire</a>
+
     </header>
 
     <main>
@@ -88,18 +95,17 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <img src="NeoOrbit Logo" alt="NeoOrbit Logo">
-            <span>NEOORBIT© 2025</span>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Privacy & Legal</a>
-                <a href="#">Check Region Availability</a>
-                <span>Want to follow NeoOrbit news?</span>
-                <div class="email-container">
-                    <input type="email" placeholder="Enter your e-mail">
-                    <img src="arrow-icon.png" alt="Submit" class="arrow-icon">
-                </div>
+        <div class="footer-container">
+            <img src="/assets/img/logos/logoNew.png" alt="NeoOrbit" width="90px" ="footer-logo">
+            <nav class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Priority and Analysis</a>
+                <a href="#" class="footer-link">Check Region Availability</a>
+                <a href="#" class="footer-link">Want to share NeoOrbit results?</a>
+            </nav>
+            <div class="email-section">
+                <input type="email" placeholder="Email" class="email-input">
+                <button type="submit" class="submit-btn">→</button>
             </div>
         </div>
     </footer>

@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCTS</title>
-    <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="/assets/css/product.css">
 </head>
 <body>
-    <header>
-        <img src="NeoOrbit.png" alt="NeoOrbit">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Reviews</a>
-            <a href="#" class="active">Product</a>
-            <a href="#">Contact</a>
+    <header class="header">
+        <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit-Logo" width="175px">
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html"">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>                                
         </nav>
-        <a href="#" class="acquire">Acquire</a>
+        <label for="menu-toggle" class="burger-icon">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </label>  
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <a href="/html/product.html" class="button-acquire">Acquire</a>
+
     </header>
 
     <div class="products-text">PRODUCTS</div>
@@ -88,8 +97,7 @@
 
     <footer>
         <div class="footer-container">
-            <img src="logo.png" alt="NeoOrbit" class="footer-logo">
-            <div class="footer-barrier"></div>
+            <img src="/assets/img/logos/logoNew.png" alt="NeoOrbit" width="90px" ="footer-logo">
             <nav class="footer-links">
                 <a href="#" class="footer-link">Privacy Policy</a>
                 <a href="#" class="footer-link">Priority and Analysis</a>

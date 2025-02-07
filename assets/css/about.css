@@ -1,4 +1,13 @@
 /* Font imports */
+
+:root {
+    --white: #f5f5f5;
+    --black: #1a1a1a;
+    --blue: #0066ff;
+    --darkblue: #0550E3;
+
+}
+
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
 @font-face {
     font-family: 'Monument Extended';
@@ -25,13 +34,8 @@
     font-weight: 500;
 }
 
-/* Reset CSS with updated default font */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Satoshi', sans-serif;
-}
+
+
 
 /* Update headings to use Monument Extended */
 h1, h2, h3, h4, h5, h6, 
@@ -43,58 +47,140 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'Monument Extended', sans-serif;
     font-weight: 500;
 }
-
-body {
-    background-color: white;
+/* Reset CSS with updated default font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
     font-family: 'Satoshi', sans-serif;
 }
 
-/* Header */
-nav {
+body {
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
-    border-bottom: 1px solid #e0e0e0;
+    margin-top: 10px;
+    margin-bottom: 60px;
 }
 
-nav img {
-    height: 40px;
-}
 
-.nav-links {
+.header nav ul {
     display: flex;
-    gap: 40px;
+    
 }
 
-.nav-links a {
+.header nav ul li {
+    list-style: none;
+}
+
+.header ul li a {
     text-decoration: none;
-    color: #000;
+    padding: 0 20px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    color: var(--black);
+    font-size: 18px;
 }
 
-.nav-links a:hover {
-    color: #0066FF;
+/* Estilo para o item ativo */
+nav ul li a:hover {
+    color: var(--blue); /* Cor Azul-claro para o item com hover */
+    transition: color 0.5s ease;
 }
 
-.nav-links a.active {
-    color: #0066FF;
+/* Estilo para o item ativo */
+nav ul li:active {
+    color: var(--darkblue); /* Cor Azul para o item ativo */
+    transition: color 0.2s ease;
 }
 
-.acquire-btn {
-    background-color: #0066FF;
-    color: white;
-    border: none;
-    padding: 10px 25px;
+.button-acquire {
+    text-decoration: none;
+    width: 115px;
+    background: var(--blue);
+    padding: 10px;
+    text-align: center;
     border-radius: 5px;
-    cursor: pointer;
+    color: var(--white);
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    line-height: 25px;
+    transition: background 0.5s ease;
 }
 
-.acquire-btn:hover {
-    background-color: #0052cc;
+.button-acquire:hover {
+    background: var(--darkblue);
+}
+
+.button-acquire:active {
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+
+.burger-icon {
+    font-size: 30px;
+    color: var(--black);
+    cursor: pointer;
+    display: none; /* Esconde o ícone no desktop */
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+.header nav ul {
+    display: flex;
+    
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 18px;
+}
+
+/* Estilo para o item ativo */
+nav ul li a:hover {
+    color: var(--blue); /* Cor Azul-claro para o item com hover */
+    transition: color 0.5s ease;
+}
+
+/* Estilo para o item ativo */
+nav ul li:active {
+    color: var(--darkblue); /* Cor Azul para o item ativo */
+    transition: color 0.2s ease;
+}
+
+.burger-icon {
+    font-size: 30px;
+    color: var(--black);
+    cursor: pointer;
+    display: none; /* Esconde o ícone no desktop */
+}
+
+.menu-toggle {
+    display: none;
 }
 
 /* Main Content */
@@ -110,15 +196,16 @@ h1 {
     font-weight: bold;
     letter-spacing: -1px;  /* Compressed text */
     text-align: center;
+    color: var(--black);
 }
 
 h1.neoorbit {
     color: #0066FF;
     font-size: 48px;
-    font-weight: bold;
-    letter-spacing: -4px;
+    font-weight: 500;
     margin-bottom: 30px;
     line-height: 0.9;
+    font-family: "monument";
 }
 
 .text-content {
@@ -139,6 +226,7 @@ h1.neoorbit {
     letter-spacing: -1px;
     margin-bottom: 40px;
     text-align: center;
+    color: var(--black);
 }
 
 /* Stats styling - Updated */
@@ -157,6 +245,7 @@ h1.neoorbit {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: -0.5px;
+    color: var(--black);
 }
 
 .stat .blue {
@@ -186,6 +275,7 @@ h1.neoorbit {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: -0.5px;
+    color: var(--black);
 }
 
 .feature .blue {
@@ -199,103 +289,174 @@ h1.neoorbit {
     color: #333;
 }
 
-/* Footer - Updated */
-footer {
-    background-color: #fff;
-    padding: 10px 0;  /* Reduced padding */
-    border-top: 1px solid #e0e0e0;
-}
-
-.footer-content {
+/* Estilos do Footer */
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    gap: 2rem;  /* Aumentado de 1rem para 2rem */
+    padding: 0 1.5rem;
 }
 
-.footer-content img {
-    height: 20px;  /* Reduced logo size */
+/* Logo do footer */
+.footer-logo {
+    height: 20px;
 }
 
-.footer-content span {
-    color: #666;
-    font-size: 12px;  /* Smaller font size */
-    margin-left: 15px;
+/* Barreira vertical */
+.footer-barrier {
+    height: 20px;
+    width: 1px;
+    background-color: #e0e0e0;
+    margin: 0 1.5rem;
 }
 
+/* Container dos links */
 .footer-links {
     display: flex;
     align-items: center;
-    gap: 1.5rem;  /* Aumentado de 1rem para 1.5rem */
-    margin-left: auto;
 }
 
-.footer-links a {
+/* Links do footer */
+.footer-link {
+    color: #333;
     text-decoration: none;
-    color: #666;
-    font-size: 12px;  /* Smaller font size */
-    transition: color 0.3s ease;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0 0.4rem;
+    white-space: nowrap;
 }
 
-.footer-links a:hover {
+/* Separador entre links */
+.footer-link:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    color: #999;
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+/* Hover nos links */
+.footer-link:hover {
     color: #0066FF;
 }
 
-/* Ajuste os textos do footer em inglês */
-.footer-links a[href*="Politica-de-Privacidade"] {
-    content: "Privacy Policy";
+/* Ícone de seta no final */
+.arrow-icon {
+    margin-left: 0.5rem;
+    height: 14px;
+    opacity: 0.5;
 }
 
-.footer-links a[href*="Privacidade-e-Juridico"] {
-    content: "Privacy & Legal";
-}
-
-.footer-links a[href*="Consultar-Disponibilidade-de-Regiao"] {
-    content: "Check Region Availability";
-}
-
-.footer-links a[href*="Deseja-acompanhar-as-novidades"] {
-    content: "Want to follow NeoOrbit news?";
-}
-
-.email-container input[type="email"]::placeholder {
-    content: "Enter your e-mail";
-}
-
-/* Email input styling - Updated */
-.email-container {
+.footer-search {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 2px;
-    background: white;
-    margin-top: 1rem;  /* Adicionado margem superior */
+    margin-left: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.email-container input[type="email"] {
+/* Input de email */
+.footer-input {
     border: none;
-    outline: none;
-    padding: 4px 8px;
-    font-size: 12px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.65rem;
     width: 150px;
+    outline: none;
 }
 
-.email-container .arrow-icon {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
+.footer-input::placeholder {
+    color: #999;
+}
+
+/* Botão de busca */
+.footer-search-btn {
+    background: none;
+    border: none;
+    padding: 0.25rem 0.5rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #e0e0e0;
 }
 
-.email-container:hover {
-    border-color: #0066FF;
+/* Ícone de busca */
+.search-icon {
+    height: 12px;
+    opacity: 0.5;
 }
 
-.email-container .arrow-icon:hover {
-    opacity: 0.8;
+.footer-search-btn:hover .search-icon {
+    opacity: 0.7;
+}
+
+/* Seção de email */
+.email-section {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+/* Campo de email */
+.email-input {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background: transparent;
+    font-size: 0.65rem;
+    color: #333;
+    padding: 0.25rem;
+    width: 120px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.email-input::placeholder {
+    color: #333;
+    font-weight: 600;
+}
+
+.email-input:hover,
+.email-input:focus {
+    border-bottom-color: #0066FF;
+}
+
+/* Botão de expandir */
+.expand-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícone de expandir */
+.expand-icon {
+    height: 14px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.expand-btn:hover .expand-icon {
+    opacity: 0.7;
+}
+
+/* Botão de enviar */
+.submit-btn {
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.submit-btn:hover {
+    color: #0066FF;
 }
 
 /* Responsive adjustments */
