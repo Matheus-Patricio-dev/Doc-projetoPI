@@ -228,8 +228,16 @@ nav ul li:active {
 /* Ajuste do conteúdo dentro do card */
 .investment {
     display: flex;
-    justify-content: space-between;
+    flex-flow: wrap;
+    justify-content: center;
     margin-bottom: 1rem;
+    margin-top: auto;
+}
+
+.investiment-price {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .card {
@@ -329,10 +337,7 @@ nav ul li:active {
     opacity: 0.5;
 }
 
-/* Aplicando Monument Extended nos títulos */
-h1, .card h2 {
-    font-family: 'Monument Extended', sans-serif;
-}
+
 
 .card h3, .card p, .card li {
     font-family: 'Satoshi', sans-serif;
