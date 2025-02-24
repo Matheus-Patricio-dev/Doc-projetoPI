@@ -37,16 +37,20 @@
 
             <form class="contact-form">
                 <div class="form-content-name">
-                    <input type="text" placeholder="Name" class="form-container" required>
-                    <input type="text" placeholder="Last Name" class="form-container" required>
+                    <input type="text" placeholder="Name" class="form-container" required
+                           title="Nome deve conter apenas letras e ter entre 2 e 100 caracteres">
+                    <input type="text" placeholder="Last Name" class="form-container" required
+                           title="Sobrenome deve conter apenas letras e ter entre 2 e 100 caracteres">
                 </div>
 
                 <div class="form-content">
-                    <input type="email" class="form-container" placeholder="E-Mail" required>
+                    <input type="email" class="form-container" placeholder="E-Mail" required
+                           title="Digite um email válido (exemplo: nome@dominio.com)">
                 </div>
 
                 <div class="form-content">
-                    <textarea placeholder="Message" class="form-container" required></textarea>
+                    <textarea placeholder="Message" class="form-container" required
+                             title="A mensagem deve ter pelo menos 10 caracteres"></textarea>
                 </div>
 
                 <button type="submit" class="send-btn">Send</button>
@@ -68,5 +72,6 @@
             </div>
         </div>
     </footer>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
