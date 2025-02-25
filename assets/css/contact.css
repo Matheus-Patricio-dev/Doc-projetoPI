@@ -201,7 +201,6 @@ h1 {
 
 /* Estilo para os campos do formulário */
 .form-content {
-    display: flex;
     gap: 1rem;
     width: 100%;
 }
@@ -209,6 +208,7 @@ h1 {
 .form-content-name {
     display: flex;
     gap: 30px;
+    justify-content: space-between;
 }
 
 .form-row .form-container {
@@ -330,16 +330,6 @@ textarea {
     white-space: nowrap;
 }
 
-/* Separador entre links */
-.footer-link:not(:last-child)::after {
-    content: ">";
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
-    color: #999;
-    font-size: 0.6rem;
-    font-weight: 300;
-}
-
 /* Hover nos links */
 .footer-link:hover {
     color: #0066FF;
@@ -403,7 +393,7 @@ textarea {
 }
 
 /* Campo de email */
-.email-input {
+.footer-email-input {
     border: none;
     border-bottom: 1px solid #e0e0e0;
     background: transparent;
@@ -415,13 +405,13 @@ textarea {
     transition: border-color 0.2s ease;
 }
 
-.email-input::placeholder {
+.footer-email-input::placeholder {
     color: #333;
     font-weight: 600;
 }
 
-.email-input:hover,
-.email-input:focus {
+.footer-email-input:hover,
+.footer-email-input:focus {
     border-bottom-color: #0066FF;
 }
 
@@ -455,6 +445,31 @@ textarea {
     color: #666;
     font-size: 14px;
     transition: color 0.2s;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+    display: none; /* Esconde os erros por padrão */
+}
+
+.form-container.error {
+    border: 2px solid red;
+}
+
+.name-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.lastname-form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .submit-btn:hover {
@@ -552,6 +567,17 @@ textarea {
     .contact-section .subtitle{
         font-size: 14px;
         margin-bottom: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
     }
 
     .footer-content img {

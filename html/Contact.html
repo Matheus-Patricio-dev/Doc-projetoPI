@@ -6,6 +6,7 @@
     <title>Contact Us - NeoOrbit</title>
     <link rel="stylesheet" href="../assets/css/contact.css">
     <link rel="shortcut icon" href="../assets/img/logos/logoNew.png">
+    <script src="/js/contact.js"></script>
 </head>
 <body>
         <header class="header">
@@ -35,22 +36,35 @@
             <p class="description">Feel free to send us a message!</p>
             <p class="subtitle">Our support team will get in touch to answer all your questions and help with whatever you need.</p>
 
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm">
                 <div class="form-content-name">
-                    <input type="text" placeholder="Name" class="form-container" required>
-                    <input type="text" placeholder="Last Name" class="form-container" required>
+                    <div class="name-content">
+                        <input type="text" id="name" name="name" placeholder="Name" class="form-container" required>
+                        <span class="error-message" id="error-name"></span>
+                    </div>
+                    <div class="lastname-form-content">
+                        <input type="text" id="last-name" name="lastName" placeholder="Last Name" class="form-container" required>
+                        <span class="error-message" id="error-last-name"></span>
+                    </div>
                 </div>
-
+            
                 <div class="form-content">
-                    <input type="email" class="form-container" placeholder="E-Mail" required>
+                    <div class="email-form-content">
+                        <input type="email" id="email" name="email" class="form-container" placeholder="E-Mail" required>
+                        <span class="error-message" id="error-email"></span>
+                    </div>
                 </div>
-
+            
                 <div class="form-content">
-                    <textarea placeholder="Message" class="form-container" required></textarea>
+                    <div class="message-form-content">
+                        <textarea id="message" name="message" placeholder="Message" class="form-container" required></textarea>
+                        <span class="error-message" id="error-message"></span>
+                    </div>
                 </div>
-
+            
                 <button type="submit" class="send-btn">Send</button>
             </form>
+            
         </section>
     </main>
     <footer>
@@ -63,8 +77,9 @@
                 <a href="#" class="footer-link">Want to share NeoOrbit results?</a>
             </nav>
             <div class="email-section">
-                <input type="email" placeholder="Email" class="email-input">
+                <input type="email" placeholder="Email" id="footer-email" class="footer-email-input" >
                 <button type="submit" class="submit-btn">→</button>
+                <span class="error-message" id="error-footer-email"></span>
             </div>
         </div>
     </footer>

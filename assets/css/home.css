@@ -236,18 +236,10 @@ aside img {
     text-decoration: none;
     font-size: 0.65rem;
     font-weight: 600;
-    padding: 0 0.4rem;
+    padding: 0 0.4em;
     white-space: nowrap;
-}
-
-/* Separador entre links */
-.footer-link:not(:last-child)::after {
-    content: ">";
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
-    color: #999;
-    font-size: 0.6rem;
-    font-weight: 300;
+    transition: 0.3s all ease-in-out;
+    
 }
 
 /* Hover nos links */
@@ -275,7 +267,7 @@ aside img {
 .footer-input {
     border: none;
     padding: 0.25rem 0.5rem;
-    font-size: 0.65rem;
+    font-size: 1em;
     width: 150px;
     outline: none;
 }
@@ -380,7 +372,6 @@ aside img {
         max-width: 390px;
     }
 
-  
     
     .header img {
         width: 90px;
@@ -402,11 +393,11 @@ aside img {
         list-style-type: none;
         padding: 0;
     }
-      
+
     #navbar ul li {
     padding: 10px 0;
     }
-      
+
     #navbar ul li a {
     text-decoration: none;
     color: white;
@@ -486,7 +477,6 @@ aside img {
     aside img:nth-child(4),
     aside img:nth-child(5) {
       display: none;
-      
     }
 
     .second-part h2 {
@@ -537,6 +527,17 @@ aside img {
     
     }
 
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
     #email {
         font-size: 6px;
         
@@ -549,3 +550,4 @@ aside img {
         padding: 0;
     }
 }
+

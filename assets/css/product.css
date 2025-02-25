@@ -208,7 +208,7 @@ nav ul li:active {
 
 /* Botão Order */
 .order {
-    width: 120px; /* Largura reduzida */
+    width: 100%; /* Largura reduzida */
     padding: 0.5rem 0;
     background: #0066FF;
     color: var(--white);
