@@ -5,54 +5,26 @@
 <title>Products - NeoOrbit</title>
 <link rel="stylesheet" href="../assets/css/product.css">
 <link rel="shortcut icon" href="../assets/img/logos/logoNew.png">
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const burgerIcon = document.querySelector('.burger-icon');
-        const navLinks = document.querySelector('.nav-links');
-
-        // Função simples para alternar o menu
-        burgerIcon.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Fecha o menu ao clicar em um link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-
-        // Fecha o menu ao redimensionar para desktop
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                navLinks.classList.remove('active');
-            }
-        });
-    });
-</script>
+<script src="../js/product.js"></script>
 </head>
 <body>
     <header class="header">
         <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit-Logo" width="175px">
         <nav class="nav-links">
             <ul>
-                <li><a href="home.html"">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="product.html">Product</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>                                
         </nav>
-        <label for="menu-toggle" class="burger-icon">
+        <div class="burger-icon">
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
-        </label>  
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        </div>
         <a href="/html/product.html" class="button-acquire">Acquire</a>
-
     </header>
     <main>
         
@@ -146,3 +118,4 @@
     </footer>
 </body>
 </html>
+
