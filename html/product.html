@@ -9,29 +9,26 @@
     document.addEventListener('DOMContentLoaded', () => {
         const burgerIcon = document.querySelector('.burger-icon');
         const navLinks = document.querySelector('.nav-links');
-        const menuToggle = document.getElementById('menu-toggle');
 
-        // Simplificando a lógica do clique
-        burgerIcon.addEventListener('click', (e) => {
-            e.stopPropagation(); // Previne que o clique se propague
-            navLinks.style.display = navLinks.style.display === 'none' ? 'block' : 'none';
+        // Função simples para alternar o menu
+        burgerIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
 
-        // Inicializa o menu como escondido em mobile
-        if (window.innerWidth <= 768) {
-            navLinks.style.display = 'none';
-        }
+        // Fecha o menu ao clicar em um link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
 
-        // Fecha o menu ao clicar fora
-        document.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                navLinks.style.display = 'none';
+        // Fecha o menu ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('active');
             }
-        });
-
-        // Previne que o menu feche ao clicar nele mesmo
-        navLinks.addEventListener('click', (e) => {
-            e.stopPropagation();
         });
     });
 </script>
@@ -149,4 +146,3 @@
     </footer>
 </body>
 </html>
-
