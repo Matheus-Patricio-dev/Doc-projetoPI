@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - NeoOrbit</title>
-    <link rel="stylesheet" href="/assets/css/product.css">
-    <link rel="shortcut icon" href="../assets/img/logos/logoNew.png">
-    <script src=""></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - NeoOrbit</title>
+<link rel="stylesheet" href="../assets/css/product.css">
+<link rel="shortcut icon" href="../assets/img/logos/logoNew.png">
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const burgerIcon = document.querySelector('.burger-icon');
+        const navLinks = document.querySelector('.nav-links');
+        const menuToggle = document.getElementById('menu-toggle');
+
+        // Simplificando a lógica do clique
+        burgerIcon.addEventListener('click', (e) => {
+            e.stopPropagation(); // Previne que o clique se propague
+            navLinks.style.display = navLinks.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Inicializa o menu como escondido em mobile
+        if (window.innerWidth <= 768) {
+            navLinks.style.display = 'none';
+        }
+
+        // Fecha o menu ao clicar fora
+        document.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // Previne que o menu feche ao clicar nele mesmo
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
+</script>
 </head>
 <body>
     <header class="header">
@@ -106,7 +134,7 @@
 
     <footer>
         <div class="footer-container">
-            <img src="/assets/img/logos/logoNew.png" alt="NeoOrbit" width="90px" ="footer-logo">
+            <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit" width="90px" ="footer-logo">
             <nav class="footer-links">
                 <a href="#" class="footer-link">Privacy Policy</a>
                 <a href="#" class="footer-link">Priority and Analysis</a>
@@ -121,3 +149,4 @@
     </footer>
 </body>
 </html>
+
