@@ -110,11 +110,19 @@ nav ul li:active {
     transform: translateY(2px);
 }
 
-.menu-toggle {
+.burger-icon {
     display: none;
+    cursor: pointer;
 }
 
-.burger-icon {
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+}
+
+.menu-toggle {
     display: none;
 }
 
@@ -538,34 +546,53 @@ nav ul li:active {
     color: #0066FF;
 }
 
-@media screen and (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 80px; /* Ajuste conforme a altura do seu header */
-        left: 0;
-        width: 100%;
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        z-index: 1000;
-    }
+.nav-links {
+    transition: all 0.3s ease-in-out;
+}
 
-    .nav-links ul {
-        flex-direction: column;
-        gap: 20px;
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        padding: 15px;
     }
 
     .burger-icon {
         display: block;
-        cursor: pointer;
     }
 
-    .burger-line {
-        width: 25px;
-        height: 3px;
-        background-color: #000;
-        margin: 5px 0;
-        transition: 0.3s;
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 
     /* Ajustes gerais */
@@ -640,10 +667,6 @@ nav ul li:active {
 }
 
 @media screen and (min-width: 769px) {
-    .burger-icon {
-        display: none;
-    }
-    
     .nav-links {
         display: block !important;
     }
@@ -718,3 +741,5 @@ nav ul li:active {
         width: 300px;
     }
 }
+
+
