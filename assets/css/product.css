@@ -113,6 +113,7 @@ nav ul li:active {
 .burger-icon {
     display: none;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .burger-line {
@@ -120,6 +121,7 @@ nav ul li:active {
     height: 3px;
     background-color: #000;
     margin: 5px 0;
+    transition: all 0.3s ease;
 }
 
 .menu-toggle {
@@ -547,25 +549,22 @@ nav ul li:active {
 }
 
 .nav-links {
-    transition: all 0.3s ease-in-out;
+    display: block;
 }
 
 @media screen and (max-width: 768px) {
     .header {
         position: relative;
         padding: 15px;
-    }
-
-    .burger-icon {
-        display: block;
+        width: 100%;
     }
 
     .nav-links {
-        display: none;
+        display: none; /* Começa escondido */
         position: absolute;
         top: 100%;
         left: 0;
-        right: 0;
+        width: 100%;
         background-color: var(--white);
         padding: 20px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -573,12 +572,17 @@ nav ul li:active {
     }
 
     .nav-links.active {
+        display: block; /* Mostra quando ativo */
+    }
+
+    .burger-icon {
         display: block;
+        cursor: pointer;
     }
 
     .nav-links ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
 
     .nav-links ul li {
@@ -591,84 +595,45 @@ nav ul li:active {
         padding: 10px 0;
     }
 
-    .menu-toggle {
-        display: none;
-    }
-
-    /* Ajustes gerais */
-    body {
-        padding: 0 1rem;
-    }
-
-    /* Header ajustes */
-    .header {
-        margin-bottom: 30px;
-        padding: 0 1rem;
-    }
-
-    /* Título Products */
-    .products-text h1 {
-        font-size: 1.8rem;
-        padding: 0 1rem;
-    }
-
-    /* Container dos cards */
+    /* Cards responsivos */
     .cards-container {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
-        margin: 1rem;
+        gap: 2rem;
     }
 
-    /* Ajuste dos cards */
     .card {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    /* Toggle buttons */
-    .toggle {
         width: 90%;
-        max-width: 300px;
-    }
-
-    .toggle button {
-        padding: 0.4rem 1.2rem;
-        font-size: 0.8rem;
+        max-width: 320px;
     }
 
     /* Footer responsivo */
     .footer-container {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         padding: 1rem;
     }
 
     .footer-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .footer-barrier {
-        display: none;
-    }
-
-    .email-section {
-        margin: 1rem 0;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .email-input {
-        width: 100%;
-        max-width: 200px;
+        gap: 1rem;
     }
 }
 
 @media screen and (min-width: 769px) {
+    .burger-icon {
+        display: none;
+    }
+
     .nav-links {
         display: block !important;
+    }
+
+    .nav-links.mobile {
+        position: static;
+        box-shadow: none;
+        padding: 0;
     }
 }
 
@@ -741,5 +706,6 @@ nav ul li:active {
         width: 300px;
     }
 }
+
 
 
