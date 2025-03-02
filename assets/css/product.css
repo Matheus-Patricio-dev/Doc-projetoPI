@@ -490,7 +490,7 @@ nav ul li:active {
 }
 
 /* Campo de email */
-.email-input {
+.footer-email-input {
     border: none;
     border-bottom: 1px solid #e0e0e0;
     background: transparent;
@@ -502,13 +502,13 @@ nav ul li:active {
     transition: border-color 0.2s ease;
 }
 
-.email-input::placeholder {
+.footer-email-input::placeholder {
     color: #333;
     font-weight: 600;
 }
 
-.email-input:hover,
-.email-input:focus {
+.footer-email-inputhover
+.footer-email-inputfocus {
     border-bottom-color: #0066FF;
 }
 
@@ -569,6 +569,7 @@ nav ul li:active {
         padding: 20px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         z-index: 1000;
+        display: none;
     }
 
     .nav-links.active {

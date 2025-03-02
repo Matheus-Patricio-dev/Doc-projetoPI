@@ -305,7 +305,7 @@ aside img {
 }
 
 /* Campo de email */
-.email-input {
+.footer-email-input {
     border: none;
     border-bottom: 1px solid #e0e0e0;
     background: transparent;
@@ -317,13 +317,13 @@ aside img {
     transition: border-color 0.2s ease;
 }
 
-.email-input::placeholder {
+.footer-email-input::placeholder {
     color: #333;
     font-weight: 600;
 }
 
-.email-input:hover,
-.email-input:focus {
+.footer-email-input:hover,
+.footer-email-input:focus {
     border-bottom-color: #0066FF;
 }
 

@@ -42,33 +42,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Função específica para validar e-mails
+    function validateEmail(input, errorElement) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const value = input.value.trim();
+
+        if (value === "") {
+            removeError(input, errorElement); // Remove erro se estiver vazio
+        } else if (!emailRegex.test(value)) {
+            showError(input, errorElement, "Digite um e-mail válido.");
+        } else {
+            removeError(input, errorElement);
+        }
+    }
+
     // Validação em tempo real para `name` e `lastName`
     name.addEventListener("input", () => validateTextInput(name, errorName, 3, "O nome"));
     lastName.addEventListener("input", () => validateTextInput(lastName, errorLastName, 3, "O sobrenome"));
 
     // Validação em tempo real do e-mail
-    email.addEventListener("input", () => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (email.value.trim() === "") {
-            removeError(email, errorEmail); // Remove erro se estiver vazio
-        } else {
-            validateTextInput(email, errorEmail, 3, "Digite um e-mail válido.");
-        }
-    });
-
-    footerEmail.addEventListener("input", () => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (footerEmail.value.trim() === "") {
-            removeError(footerEmail, errorFooterEmail); // Remove erro se estiver vazio
-        } else {
-            validateTextInput(footerEmail, errorFooterEmail, 3, "Digite um e-mail válido.");
-        }
-    });
+    email.addEventListener("input", () => validateEmail(email, errorEmail));
+    footerEmail.addEventListener("input", () => validateEmail(footerEmail, errorFooterEmail));
 
     // Validação em tempo real da mensagem
-    message.addEventListener("input", () => {
-        validateTextInput(message, errorMessage, 10, "A mensagem");
-    });
+    message.addEventListener("input", () => validateTextInput(message, errorMessage, 10, "A mensagem"));
 
     // Validação final no submit
     form.addEventListener("submit", function (event) {
@@ -86,13 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (email.value.trim() !== "" && !emailRegex.test(email.value.trim())) {
+        if (!emailRegex.test(email.value.trim())) {
             showError(email, errorEmail, "Digite um e-mail válido.");
             isValid = false;
         }
 
-        if (footerEmail.value.trim() !== "" && !emailRegex.test(footerEmail.value.trim())) {
+        if (!emailRegex.test(footerEmail.value.trim())) {
             showError(footerEmail, errorFooterEmail, "Digite um e-mail válido.");
             isValid = false;
         }

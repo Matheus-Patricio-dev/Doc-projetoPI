@@ -26,84 +26,23 @@
         </div>
         <a href="/html/product.html" class="button-acquire">Acquire</a>
     </header>
-    <main>
-        
-            <div class="products-text">PRODUCTS</div>
-        
-            <div class="toggle">
-                <button class="active">Plan</button>
-                <button>Products</button>
-            </div>
-        
-            <div class="products-section">
-                <div class="cards-container">
-                    <div class="card">
-                        <h2>Basic</h2>
-                        <p>About the plan</p>
-                        <h3>Resources</h3>
-                        <ul>
-                            <li>high Speed Connection</li>
-                            <li>Geolocation</li>
-                        </ul>
-                        <div class="investment">
-                            <p>Monthly plan</p>
-                            <div class="investiment-price">
-                                <span>Investment</span>
-                                <span>R$1.000/Month</span>
-                            </div>
-                        </div>
-                        <button class="order">Order</button>
-                    </div>
-        
-                    <div class="card">
-                        <h2>Premium</h2>
-                        <p>About the plan</p>
-                        <h3>Resources</h3>
-                        <ul>
-                            <li>High Speed Connection</li>
-                            <li> Geolocation & Maps</li>
-                            <li>Geospatial Analytics</li>
-                            <li>Equipment Monitoring & Backup System</li>
-                        </ul>
-                        <div class="investment">
-                            <p>Monthly plan</p>
-                            <div class="investiment-price">
-                                <span>Investment</span>
-                                <span>R$5.000/Month</span>
-                            </div>
-                        </div>
-                        <button class="order">Order</button>
-                    </div>
-        
-                    <div class="card">
-                        <h2>Ultimate</h2>
-                        <p>About the plan</p>
-                        <h3>Resources</h3>
-                        <ul>
-                            <li>High Speed Connection</li>
-                            <li> Geolocation & Maps</li>
-                            <li>Geospatial Analytics</li>
-                            <li>Equipment Monitoring & Backup System</li>
-                            <li>Disaster Monitoring and Prevention</li>
-                            <li>Defense Against Space Objects</li>
-                        </ul>
-                        <div class="investment">
-                            <p>Monthly plan</p>
-                            <div class="investiment-price">
-                                <span>Investment</span>
-                                <span>R$10.000/Month</span>
-                            </div>
-                        </div>
-                        <button class="order">Order</button>
-                    </div>
-                </div>
-            </div>
 
+    <main>
+        <div class="products-text">PRODUCTS</div>
+        
+        <div class="toggle">
+            <button class="active">Plan</button>
+            <button>Products</button>
+        </div>
+        
+        <div class="products-section">
+            <div class="cards-container" id="cards-container"></div>
+        </div>
     </main>
 
     <footer>
         <div class="footer-container">
-            <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit" width="90px" ="footer-logo">
+            <img src="../assets/img/logos/logoNew.png" alt="NeoOrbit" width="90px" class="footer-logo">
             <nav class="footer-links">
                 <a href="#" class="footer-link">Privacy Policy</a>
                 <a href="#" class="footer-link">Priority and Analysis</a>
@@ -111,11 +50,13 @@
                 <a href="#" class="footer-link">Want to share NeoOrbit results?</a>
             </nav>
             <div class="email-section">
-                <input type="email" placeholder="Email" class="email-input">
+                <input type="email" placeholder="Email" id="footer-email" class="footer-email-input" >
                 <button type="submit" class="submit-btn">→</button>
+                <span class="error-message" id="error-footer-email"></span>
             </div>
         </div>
     </footer>
+
+    <script src="/js/product.js"></script>
 </body>
 </html>
-
