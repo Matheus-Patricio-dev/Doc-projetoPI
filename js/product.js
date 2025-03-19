@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: "Basic",
             description: "About the plan",
-            resources: ["High Speed Connection", "Geolocation"],
+            resources: ["High Speed Connection", "Geolocation, Equipment Monitoring & Backup System"],
             price: "R$1.000/Month"
         },
         {
